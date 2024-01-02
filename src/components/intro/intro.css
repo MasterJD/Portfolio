@@ -1,0 +1,102 @@
+#intro {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg{
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+}
+.introContent {
+    height: 80vh;
+    width: 100vw;
+    padding: 1rem;
+    font-size: 5rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.hello{
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.introName {
+    color: #64B6AC;
+    text-shadow: 1.2px 1.2px 1.2px white;
+}
+.introPara { 
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-top: 2rem;
+}
+.button {
+    background: #FCFFFD;
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    text-decoration: wavy;
+}
+.buttonImage {
+    object-fit: cover;
+    margin: 0 0.25rem;
+    height: 1rem;
+}
+
+.bg {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    z-index: -1;
+    height: 80vh;
+
+    -webkit-animation:spin 35s linear infinite;
+    -moz-animation:spin 35s linear infinite;
+    animation:spin 35s linear infinite;
+}
+.floatingButton {
+    position: absolute;
+    bottom: 5%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #64B6AC;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    font-weight: bold;
+  }
+  
+  .floatingButton:hover {
+    transform: translate(-50%, -10px); /* Adjust the distance to move up on hover */
+  }
+  
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+@media screen and (max-width: 840px) {
+    .introContent{
+        font-size: 10vw;
+    }
+}
