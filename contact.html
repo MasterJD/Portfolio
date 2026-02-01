@@ -1,0 +1,233 @@
+<!-- Contact Me - Pixel Variant -->
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contact - Pixel Edition</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dc2626",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-image: 
+                linear-gradient(rgba(128, 128, 128, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(128, 128, 128, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .dark body {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        .scanlines {
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%,
+                rgba(0, 0, 0, 0.2) 50%
+            ), linear-gradient(
+                90deg,
+                rgba(255, 0, 0, 0.02),
+                rgba(0, 255, 0, 0.01),
+                rgba(0, 0, 255, 0.02)
+            );
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display selection:bg-primary selection:text-white min-h-screen relative overflow-x-hidden transition-colors duration-300">
+    <!-- Scanline Effect Overlay -->
+    <div class="fixed inset-0 z-50 scanlines pointer-events-none"></div>
+    
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Header Section -->
+            <div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <header class="flex items-center justify-between whitespace-nowrap border-b-4 border-solid border-black dark:border-white px-4 md:px-10 py-6 mb-8">
+                        <div class="flex items-center gap-4 text-black dark:text-white">
+                            <div class="size-9 flex items-center justify-center bg-black dark:bg-white text-white dark:text-black font-bold text-xl">
+                                MZ
+                            </div>
+                            <h2 class="text-black dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] uppercase">Javier Donado</h2>
+                        </div>
+                        <div class="flex flex-1 justify-end gap-8 hidden md:flex">
+                            <div class="flex items-center gap-9">
+                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="index.html">[ Home ]</a>
+                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="projects.html">[ Projects ]</a>
+                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="skills.html">[ Skills ]</a>
+                                <a class="text-primary text-sm font-bold leading-normal uppercase" href="contact.html">[ Contact ]</a>
+                            </div>
+                            <div class="flex gap-2">
+                                <!-- Language Toggle Button -->
+                                <button id="lang-toggle" class="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all font-bold text-xs">
+                                    <span id="lang-label">ES</span>
+                                </button>
+                                <!-- Theme Toggle Button -->
+                                <button id="theme-toggle" class="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
+                                    <span class="material-symbols-outlined text-lg dark:hidden">dark_mode</span>
+                                    <span class="material-symbols-outlined text-lg hidden dark:block">light_mode</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white text-black dark:text-white">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                    </header>
+
+                    <!-- Mobile Navigation -->
+                    <div id="mobile-nav" class="hidden md:hidden flex-col gap-4 px-4 pb-6 border-b-2 border-black dark:border-white mb-8">
+                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="index.html">[ Home ]</a>
+                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="projects.html">[ Projects ]</a>
+                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="skills.html">[ Skills ]</a>
+                        <a class="text-primary text-sm font-bold uppercase" href="contact.html">[ Contact ]</a>
+                        <button id="lang-toggle-mobile" class="text-left text-black dark:text-white text-sm font-bold uppercase hover:text-primary">[ <span data-lang-en="Español" data-lang-es="English">Español</span> ]</button>
+                        <button id="theme-toggle-mobile" class="text-left text-black dark:text-white text-sm font-bold uppercase hover:text-primary">[ <span data-lang-en="Toggle Theme" data-lang-es="Cambiar Tema">Toggle Theme</span> ]</button>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="flex-1 flex items-center justify-center py-20">
+                        <div class="max-w-[600px] w-full text-center px-4">
+                            <!-- Headline -->
+                            <div class="mb-12">
+                                <h1 class="text-black dark:text-white text-4xl md:text-5xl font-bold tracking-tighter uppercase mb-4"><span data-lang-en="Let's Connect" data-lang-es="Conectémonos">Let's Connect</span></h1>
+                                <p class="text-primary font-medium tracking-[0.2em] uppercase text-sm">// <span data-lang-en="Ready for new quests" data-lang-es="Listo para nuevas aventuras">Ready for new quests</span></p>
+                            </div>
+                            
+                            <!-- LinkedIn Card -->
+                            <div class="border-4 border-black dark:border-white bg-white dark:bg-black p-8 md:p-12 relative">
+                                <!-- Decorative corner -->
+                                <div class="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-primary"></div>
+                                <div class="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-primary"></div>
+                                <div class="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-primary"></div>
+                                <div class="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-primary"></div>
+                                
+                                <div class="flex flex-col items-center gap-8">
+                                    <!-- LinkedIn Icon -->
+                                    <div class="w-24 h-24 border-4 border-black dark:border-white flex items-center justify-center bg-[#0A66C2] text-white">
+                                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </div>
+                                    
+                                    <div class="space-y-4">
+                                        <p class="text-black/70 dark:text-white/70 text-lg uppercase tracking-wider">
+                                            <span data-lang-en="Find me on LinkedIn" data-lang-es="Encuéntrame en LinkedIn">Find me on LinkedIn</span>
+                                        </p>
+                                        <p class="text-black/50 dark:text-white/50 text-sm">
+                                            <span data-lang-en="Let's discuss your next project or just say hello!" data-lang-es="¡Hablemos de tu próximo proyecto o simplemente saluda!">Let's discuss your next project or just say hello!</span>
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- CTA Button -->
+                                    <a href="https://linkedin.com" target="_blank" class="group flex items-center gap-4 px-10 py-5 bg-primary text-white font-bold uppercase tracking-widest border-b-4 border-r-4 border-black dark:border-white hover:bg-primary/90 active:translate-y-1 active:border-b-0 transition-all">
+                                        <span data-lang-en="Connect on LinkedIn" data-lang-es="Conectar en LinkedIn">Connect on LinkedIn</span>
+                                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Status indicator -->
+                            <div class="mt-8 flex justify-center items-center gap-3">
+                                <div class="w-2 h-2 bg-green-500 animate-pulse"></div>
+                                <span class="text-[10px] text-gray-500 dark:text-zinc-500 uppercase tracking-widest"><span data-lang-en="Status: Available for opportunities" data-lang-es="Estado: Disponible para oportunidades">Status: Available for opportunities</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <footer class="mt-auto border-t-4 border-black dark:border-white pt-10 pb-20 px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-black/40 dark:text-white/40 text-xs font-bold uppercase tracking-[0.2em]">
+                            © 2026 MZ. ALL RIGHTS RESERVED.
+                        </div>
+                        <div class="flex gap-6">
+                            <a class="text-black dark:text-white hover:text-primary transition-colors font-bold uppercase text-xs" href="https://linkedin.com" target="_blank">LinkedIn</a>
+                            <a class="text-black dark:text-white hover:text-primary transition-colors font-bold uppercase text-xs" href="#">Resume</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        html.classList.toggle('dark', savedTheme === 'dark');
+        
+        function toggleTheme() {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        }
+        
+        themeToggle.addEventListener('click', toggleTheme);
+        if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+            mobileNav.classList.toggle('flex');
+        });
+
+        // Language Toggle
+        const langToggle = document.getElementById('lang-toggle');
+        const langToggleMobile = document.getElementById('lang-toggle-mobile');
+        const langLabel = document.getElementById('lang-label');
+        
+        // Check for saved language preference or default to English
+        let currentLang = localStorage.getItem('lang') || 'en';
+        
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            langLabel.textContent = lang === 'en' ? 'ES' : 'EN';
+            
+            document.querySelectorAll('[data-lang-en]').forEach(el => {
+                el.innerHTML = lang === 'en' ? el.dataset.langEn : el.dataset.langEs;
+            });
+        }
+        
+        function toggleLanguage() {
+            setLanguage(currentLang === 'en' ? 'es' : 'en');
+        }
+        
+        // Initialize language
+        setLanguage(currentLang);
+        
+        langToggle.addEventListener('click', toggleLanguage);
+        if (langToggleMobile) langToggleMobile.addEventListener('click', toggleLanguage);
+    </script>
+</body>
+</html>

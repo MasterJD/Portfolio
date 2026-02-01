@@ -1,0 +1,594 @@
+<!-- Skills & Technologies - Pixel Variant -->
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Skills & Technologies - Pixel Edition</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dc2626",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-image: 
+                linear-gradient(rgba(128, 128, 128, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(128, 128, 128, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .dark body {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        .scanlines {
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%,
+                rgba(0, 0, 0, 0.2) 50%
+            ), linear-gradient(
+                90deg,
+                rgba(255, 0, 0, 0.02),
+                rgba(0, 255, 0, 0.01),
+                rgba(0, 0, 255, 0.02)
+            );
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+        }
+        .tech-card {
+            transition: all 0.3s ease;
+        }
+        .tech-card:hover {
+            transform: translateY(-4px);
+            border-color: #dc2626 !important;
+            background-color: rgba(220, 38, 38, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display selection:bg-primary selection:text-white min-h-screen relative overflow-x-hidden transition-colors duration-300">
+    <!-- Scanline Effect Overlay -->
+    <div class="fixed inset-0 z-50 scanlines pointer-events-none"></div>
+    
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Header Section -->
+            <div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <header class="flex items-center justify-between whitespace-nowrap border-b-4 border-solid border-black dark:border-white px-4 md:px-10 py-6 mb-8">
+                        <div class="flex items-center gap-4 text-black dark:text-white">
+                            <div class="size-9 flex items-center justify-center bg-black dark:bg-white text-white dark:text-black font-bold text-xl">
+                                MZ
+                            </div>
+                            <h2 class="text-black dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] uppercase">Javier Donado</h2>
+                        </div>
+                        <div class="flex flex-1 justify-end gap-8 hidden md:flex">
+                            <div class="flex items-center gap-9">
+                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="index.html">[ Home ]</a>
+                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="projects.html">[ Projects ]</a>
+                                <a class="text-primary text-sm font-bold leading-normal uppercase" href="skills.html">[ Skills ]</a>
+                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="contact.html">[ Contact ]</a>
+                            </div>
+                            <div class="flex gap-2">
+                                <!-- Language Toggle Button -->
+                                <button id="lang-toggle" class="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all font-bold text-xs">
+                                    <span id="lang-label">ES</span>
+                                </button>
+                                <!-- Theme Toggle Button -->
+                                <button id="theme-toggle" class="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
+                                    <span class="material-symbols-outlined text-lg dark:hidden">dark_mode</span>
+                                    <span class="material-symbols-outlined text-lg hidden dark:block">light_mode</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white text-black dark:text-white">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                    </header>
+
+                    <!-- Mobile Navigation -->
+                    <div id="mobile-nav" class="hidden md:hidden flex-col gap-4 px-4 pb-6 border-b-2 border-black dark:border-white mb-8">
+                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="index.html">[ Home ]</a>
+                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="projects.html">[ Projects ]</a>
+                        <a class="text-primary text-sm font-bold uppercase" href="skills.html">[ Skills ]</a>
+                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="contact.html">[ Contact ]</a>
+                        <button id="lang-toggle-mobile" class="text-left text-black dark:text-white text-sm font-bold uppercase hover:text-primary">[ <span data-lang-en="Español" data-lang-es="English">Español</span> ]</button>
+                        <button id="theme-toggle-mobile" class="text-left text-black dark:text-white text-sm font-bold uppercase hover:text-primary">[ <span data-lang-en="Toggle Theme" data-lang-es="Cambiar Tema">Toggle Theme</span> ]</button>
+                    </div>
+
+                    <!-- Page Title -->
+                    <div class="text-center mb-12">
+                        <h1 class="text-black dark:text-white text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">
+                            <span data-lang-en="Skills &" data-lang-es="Habilidades &">Skills &</span> <span class="text-primary" data-lang-en="Technologies" data-lang-es="Tecnologías">Technologies</span>
+                        </h1>
+                        <p class="text-black/60 dark:text-white/60 uppercase tracking-widest text-sm">// <span data-lang-en="Loading arsenal..." data-lang-es="Cargando arsenal...">Loading arsenal...</span></p>
+                    </div>
+
+                    <!-- Frontend Section -->
+                    <section class="mb-16">
+                        <h2 class="text-black dark:text-white text-2xl font-bold leading-tight tracking-widest px-4 pb-6 pt-5 uppercase border-l-8 border-primary mb-8">
+                            // <span data-lang-en="Frontend" data-lang-es="Frontend">Frontend</span>
+                        </h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+                            <!-- React -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">React</span>
+                            </div>
+                            <!-- Next.js -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="w-16 h-16 dark:invert">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Next.js</span>
+                            </div>
+                            <!-- TypeScript -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">TypeScript</span>
+                            </div>
+                            <!-- JavaScript -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">JavaScript</span>
+                            </div>
+                            <!-- Tailwind CSS -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Tailwind</span>
+                            </div>
+                            <!-- HTML5 -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">HTML5</span>
+                            </div>
+                            <!-- CSS3 -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">CSS3</span>
+                            </div>
+                            <!-- Vue.js -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Vue.js</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Backend Section -->
+                    <section class="mb-16">
+                        <h2 class="text-black dark:text-white text-2xl font-bold leading-tight tracking-widest px-4 pb-6 pt-5 uppercase border-l-8 border-primary mb-8">
+                            // Backend
+                        </h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+                            <!-- Node.js -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Node.js</span>
+                            </div>
+                            <!-- Python -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Python</span>
+                            </div>
+                            <!-- Express -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="w-16 h-16 dark:invert">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Express</span>
+                            </div>
+                            <!-- FastAPI -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">FastAPI</span>
+                            </div>
+                            <!-- GraphQL -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">GraphQL</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Database Section -->
+                    <section class="mb-16">
+                        <h2 class="text-black dark:text-white text-2xl font-bold leading-tight tracking-widest px-4 pb-6 pt-5 uppercase border-l-8 border-primary mb-8">
+                            // Database
+                        </h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+                            <!-- PostgreSQL -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">PostgreSQL</span>
+                            </div>
+                            <!-- MongoDB -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">MongoDB</span>
+                            </div>
+                            <!-- MySQL -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">MySQL</span>
+                            </div>
+                            <!-- Redis -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Redis</span>
+                            </div>
+                            <!-- Firebase -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Firebase</span>
+                            </div>
+                            <!-- DynamoDB -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dynamodb/dynamodb-original.svg" alt="DynamoDB" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">DynamoDB</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- AWS Section -->
+                    <section class="mb-16">
+                        <h2 class="text-black dark:text-white text-2xl font-bold leading-tight tracking-widest px-4 pb-6 pt-5 uppercase border-l-8 border-primary mb-8">
+                            // Amazon Web Services
+                        </h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+                            <!-- AWS -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">AWS</span>
+                            </div>
+                            <!-- Lambda -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#FF9900]">function</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Lambda</span>
+                            </div>
+                            <!-- S3 -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#569A31]">cloud_upload</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">S3</span>
+                            </div>
+                            <!-- API Gateway -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#FF4F8B]">api</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">API Gateway</span>
+                            </div>
+                            <!-- EC2 -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#FF9900]">dns</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">EC2</span>
+                            </div>
+                            <!-- ECS -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#FF9900]">deployed_code</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">ECS</span>
+                            </div>
+                            <!-- CloudWatch -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#FF4F8B]">monitoring</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">CloudWatch</span>
+                            </div>
+                            <!-- Step Functions -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#FF4F8B]">account_tree</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Step Functions</span>
+                            </div>
+                            <!-- EventBridge -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#FF4F8B]">swap_horiz</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">EventBridge</span>
+                            </div>
+                            <!-- Secrets Manager -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#DD344C]">key</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Secrets Manager</span>
+                            </div>
+                            <!-- CloudFormation -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#FF4F8B]">layers</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">CloudFormation</span>
+                            </div>
+                            <!-- CloudTrail -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#DD344C]">track_changes</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">CloudTrail</span>
+                            </div>
+                            <!-- S3 Glacier -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#3F8624]">archive</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">S3 Glacier</span>
+                            </div>
+                            <!-- AWS Backup -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#3F8624]">backup</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">AWS Backup</span>
+                            </div>
+                            <!-- Batch -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#FF9900]">batch_prediction</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Batch</span>
+                            </div>
+                            <!-- Parameter Store -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#DD344C]">settings</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Parameter Store</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- AWS AI Tools Section -->
+                    <section class="mb-16">
+                        <h2 class="text-black dark:text-white text-2xl font-bold leading-tight tracking-widest px-4 pb-6 pt-5 uppercase border-l-8 border-primary mb-8">
+                            // AWS AI Tools
+                        </h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+                            <!-- SageMaker -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#01A88D]">model_training</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">SageMaker</span>
+                            </div>
+                            <!-- Lex -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#01A88D]">smart_toy</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Lex</span>
+                            </div>
+                            <!-- Textract -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#01A88D]">document_scanner</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Textract</span>
+                            </div>
+                            <!-- Polly -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#01A88D]">record_voice_over</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Polly</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Azure Section -->
+                    <section class="mb-16">
+                        <h2 class="text-black dark:text-white text-2xl font-bold leading-tight tracking-widest px-4 pb-6 pt-5 uppercase border-l-8 border-primary mb-8">
+                            // Microsoft Azure / DevOps
+                        </h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+                            <!-- Azure -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Azure</span>
+                            </div>
+                            <!-- Azure DevOps -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg" alt="Azure DevOps" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Azure DevOps</span>
+                            </div>
+                            <!-- Azure Boards -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#0078D4]">dashboard</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Azure Boards</span>
+                            </div>
+                            <!-- Azure Repos -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#0078D4]">source</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Azure Repos</span>
+                            </div>
+                            <!-- Azure Pipelines -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#0078D4]">rocket_launch</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Azure Pipelines</span>
+                            </div>
+                            <!-- Azure Test Plans -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#0078D4]">checklist</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Test Plans</span>
+                            </div>
+                            <!-- Azure Document Intelligence -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#0078D4]">quick_reference_all</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Doc Intelligence</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- DevOps & Infrastructure Section -->
+                    <section class="mb-16">
+                        <h2 class="text-black dark:text-white text-2xl font-bold leading-tight tracking-widest px-4 pb-6 pt-5 uppercase border-l-8 border-primary mb-8">
+                            // DevOps & Infrastructure
+                        </h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+                            <!-- Docker -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Docker</span>
+                            </div>
+                            <!-- Kubernetes -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Kubernetes</span>
+                            </div>
+                            <!-- Git -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Git</span>
+                            </div>
+                            <!-- GitHub -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="w-16 h-16 dark:invert">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">GitHub</span>
+                            </div>
+                            <!-- Linux -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Linux</span>
+                            </div>
+                            <!-- Ubuntu/WSL -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu/WSL" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">WSL/Ubuntu</span>
+                            </div>
+                            <!-- Nginx -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Nginx</span>
+                            </div>
+                            <!-- Vercel -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" class="w-16 h-16 dark:invert">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Vercel</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tools & AI Section -->
+                    <section class="mb-16">
+                        <h2 class="text-black dark:text-white text-2xl font-bold leading-tight tracking-widest px-4 pb-6 pt-5 uppercase border-l-8 border-primary mb-8">
+                            // Tools & AI Assistants
+                        </h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-4">
+                            <!-- VS Code -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">VS Code</span>
+                            </div>
+                            <!-- Postman -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Postman</span>
+                            </div>
+                            <!-- Figma -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Figma</span>
+                            </div>
+                            <!-- Jest -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="Jest" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Jest</span>
+                            </div>
+                            <!-- SonarQube -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg" alt="SonarQube" class="w-16 h-16">
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">SonarQube</span>
+                            </div>
+                            <!-- Ngrok -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#1F1E37]">vpn_lock</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Ngrok</span>
+                            </div>
+                            <!-- Lucid Charts -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#F96B13]">schema</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Lucid Charts</span>
+                            </div>
+                            <!-- GitHub Copilot -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#000000] dark:text-white">flight</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">GitHub Copilot</span>
+                            </div>
+                            <!-- Claude Code -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#D97757]">auto_awesome</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Claude</span>
+                            </div>
+                            <!-- ChatGPT -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#10A37F]">psychology</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">ChatGPT</span>
+                            </div>
+                            <!-- GPT API -->
+                            <div class="tech-card flex flex-col items-center gap-4 p-6 border-4 border-black dark:border-white bg-white/50 dark:bg-black/50">
+                                <span class="material-symbols-outlined text-5xl text-[#10A37F]">api</span>
+                                <span class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">GPT API</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer class="mt-auto border-t-4 border-black dark:border-white pt-10 pb-20 px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-black/40 dark:text-white/40 text-xs font-bold uppercase tracking-[0.2em]">
+                            © 2026 MZ. ALL RIGHTS RESERVED.
+                        </div>
+                        <div class="flex gap-6">
+                            <a class="text-black dark:text-white hover:text-primary transition-colors font-bold uppercase text-xs" href="https://linkedin.com" target="_blank">LinkedIn</a>
+                            <a class="text-black dark:text-white hover:text-primary transition-colors font-bold uppercase text-xs" href="#">Resume</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        html.classList.toggle('dark', savedTheme === 'dark');
+        
+        function toggleTheme() {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        }
+        
+        themeToggle.addEventListener('click', toggleTheme);
+        if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+            mobileNav.classList.toggle('flex');
+        });
+
+        // Language Toggle
+        const langToggle = document.getElementById('lang-toggle');
+        const langToggleMobile = document.getElementById('lang-toggle-mobile');
+        const langLabel = document.getElementById('lang-label');
+        
+        let currentLang = localStorage.getItem('lang') || 'en';
+        
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            langLabel.textContent = lang === 'en' ? 'ES' : 'EN';
+            
+            document.querySelectorAll('[data-lang-en]').forEach(el => {
+                el.innerHTML = lang === 'en' ? el.dataset.langEn : el.dataset.langEs;
+            });
+        }
+        
+        function toggleLanguage() {
+            setLanguage(currentLang === 'en' ? 'es' : 'en');
+        }
+        
+        setLanguage(currentLang);
+        
+        langToggle.addEventListener('click', toggleLanguage);
+        if (langToggleMobile) langToggleMobile.addEventListener('click', toggleLanguage);
+    </script>
+</body>
+</html>

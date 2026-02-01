@@ -1,0 +1,368 @@
+<!-- Portfolio Projects - Pixel Variant -->
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Projects - Pixel Edition</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dc2626",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-image: 
+                linear-gradient(rgba(128, 128, 128, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(128, 128, 128, 0.05) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .dark body {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        .pixel-border {
+            box-shadow: 
+                0 -4px 0 0 currentColor,
+                0 4px 0 0 currentColor,
+                -4px 0 0 0 currentColor,
+                4px 0 0 0 currentColor;
+        }
+        .scanlines {
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%,
+                rgba(0, 0, 0, 0.2) 50%
+            ), linear-gradient(
+                90deg,
+                rgba(255, 0, 0, 0.02),
+                rgba(0, 255, 0, 0.01),
+                rgba(0, 0, 255, 0.02)
+            );
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+        }
+        .pixelated {
+            image-rendering: pixelated;
+        }
+        .cartridge-hover {
+            transition: transform 0.1s, background-color 0.2s;
+        }
+        .cartridge-hover:hover {
+            transform: translateY(-8px);
+            background-color: #dc2626 !important;
+        }
+        .cartridge-hover:hover .tooltip-pixel {
+            opacity: 1;
+            display: flex;
+        }
+        .cartridge-hover:hover h2,
+        .cartridge-hover:hover span {
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display selection:bg-primary selection:text-white min-h-screen relative overflow-x-hidden transition-colors duration-300">
+    <!-- Scanline Effect Overlay -->
+    <div class="fixed inset-0 z-50 scanlines pointer-events-none"></div>
+    
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Header Section -->
+            <div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <header class="flex items-center justify-between whitespace-nowrap border-b-4 border-solid border-black dark:border-white px-4 md:px-10 py-6 mb-8">
+                    <div class="flex items-center gap-4 text-black dark:text-white">
+                        <div class="size-9 flex items-center justify-center bg-black dark:bg-white text-white dark:text-black font-bold text-xl">
+                            MZ
+                        </div>
+                        <h2 class="text-black dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] uppercase">Javier Donado</h2>
+                    </div>
+                    <div class="flex flex-1 justify-end gap-8 hidden md:flex">
+                        <div class="flex items-center gap-9">
+                            <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="index.html">[ Home ]</a>
+                            <a class="text-primary text-sm font-bold leading-normal uppercase" href="projects.html">[ Projects ]</a>
+                            <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="skills.html">[ Skills ]</a>
+                            <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="contact.html">[ Contact ]</a>
+                        </div>
+                        <div class="flex gap-2">
+                            <!-- Language Toggle Button -->
+                            <button id="lang-toggle" class="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all font-bold text-xs">
+                                <span id="lang-label">ES</span>
+                            </button>
+                            <!-- Theme Toggle Button -->
+                            <button id="theme-toggle" class="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
+                                <span class="material-symbols-outlined text-lg dark:hidden">dark_mode</span>
+                                <span class="material-symbols-outlined text-lg hidden dark:block">light_mode</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white text-black dark:text-white">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </header>
+
+                <!-- Mobile Navigation -->
+                <div id="mobile-nav" class="hidden md:hidden flex-col gap-4 px-4 pb-6 border-b-2 border-black dark:border-white mb-8">
+                    <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="index.html">[ Home ]</a>
+                    <a class="text-primary text-sm font-bold uppercase" href="projects.html">[ Projects ]</a>
+                    <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="skills.html">[ Skills ]</a>
+                    <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="contact.html">[ Contact ]</a>
+                    <button id="lang-toggle-mobile" class="text-left text-black dark:text-white text-sm font-bold uppercase hover:text-primary">[ <span data-lang-en="Español" data-lang-es="English">Español</span> ]</button>
+                    <button id="theme-toggle-mobile" class="text-left text-black dark:text-white text-sm font-bold uppercase hover:text-primary">[ <span data-lang-en="Toggle Theme" data-lang-es="Cambiar Tema">Toggle Theme</span> ]</button>
+                    </div>
+
+                    <!-- HeaderImage / Skyline -->
+                    <div class="w-full mt-8">
+                        <div class="relative overflow-hidden bg-white dark:bg-black border-4 border-black/10 dark:border-white/10 rounded-none min-h-[200px] flex items-end justify-center">
+                            <!-- Pixel Skyline Background -->
+                            <div class="absolute inset-0 opacity-40 bg-repeat-x bg-bottom h-full w-full grayscale contrast-125" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuePnd2067DL01jRoo6YVEwQjjgsTk4A57Yq_LKkYziFpAeF7W8ujdbjVcRA68ap2U-ZuGV6OHPTRPcQ6PlqGuHlZU15biNLYnnFOAAplBZYYTyqUuaCDn46-u2Hn7NvPWQl9qMOp1rMSU-og45Nnphm5yRl1Kn1UTyhEIHEvDWL6V09XveCVbbnwX3eJG-bmXVTwZlGT--TWrs90EppTEpfiWt1CLhicaO33VXlggo7d8Ein_oJz40P_7du5nivqy9J7zixslFOE");'></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-transparent to-transparent"></div>
+                            <div class="relative z-10 p-8 text-center">
+                                <p class="text-black dark:text-white tracking-[0.2em] text-4xl font-bold leading-tight uppercase italic drop-shadow-[4px_4px_0px_rgba(220,38,38,1)]">
+                                <span data-lang-en="Select Start" data-lang-es="Presiona Inicio">Select Start</span>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- HeadlineText -->
+                    <div class="w-full py-8">
+                        <h1 class="text-black dark:text-white tracking-widest text-xl font-bold leading-tight text-center uppercase">
+                            <span data-lang-en="&lt; My Projects Gallery /&gt;" data-lang-es="&lt; Galería de Proyectos /&gt;">&lt; My Projects Gallery /&gt;</span>
+                        </h1>
+                    </div>
+            
+                    <!-- Cartridge Grid -->
+                    <div class="w-full pb-20">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
+                    <!-- Project Cartridge 1 -->
+                    <div class="group relative bg-gray-100 dark:bg-[#1c1c1c] border-4 border-black dark:border-white flex flex-col items-center p-6 transition-all duration-75 cartridge-hover cursor-pointer aspect-[3/4] justify-between">
+                        <div class="w-full h-2/3 border-2 border-black/40 dark:border-white/40 bg-white dark:bg-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-500 to-transparent"></div>
+                            <span class="material-symbols-outlined text-6xl text-black/80 dark:text-white/80 pixelated">terminal</span>
+                        </div>
+                        <div class="w-full text-center mt-4">
+                            <h2 class="text-black dark:text-white text-lg font-bold leading-tight uppercase tracking-tighter mb-2">Cyber Shell</h2>
+                            <div class="h-1 w-full bg-black/20 dark:bg-white/20 rounded-full"></div>
+                        </div>
+                        <div class="tooltip-pixel absolute -top-12 left-1/2 -translate-x-1/2 hidden bg-black dark:bg-white text-white dark:text-black px-3 py-2 border-2 border-black dark:border-white whitespace-nowrap items-center gap-3 z-20">
+                            <span class="material-symbols-outlined text-sm">javascript</span>
+                            <span class="material-symbols-outlined text-sm">database</span>
+                            <span class="material-symbols-outlined text-sm">deployed_code</span>
+                            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-black dark:bg-white border-b-2 border-r-2 border-black dark:border-white rotate-45"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Cartridge 2 -->
+                    <div class="group relative bg-gray-100 dark:bg-[#1c1c1c] border-4 border-black dark:border-white flex flex-col items-center p-6 transition-all duration-75 cartridge-hover cursor-pointer aspect-[3/4] justify-between">
+                        <div class="w-full h-2/3 border-2 border-black/40 dark:border-white/40 bg-white dark:bg-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-500 to-transparent"></div>
+                            <span class="material-symbols-outlined text-6xl text-black/80 dark:text-white/80 pixelated">lan</span>
+                        </div>
+                        <div class="w-full text-center mt-4">
+                            <h2 class="text-black dark:text-white text-lg font-bold leading-tight uppercase tracking-tighter mb-2">Net Crawler</h2>
+                            <div class="h-1 w-full bg-black/20 dark:bg-white/20 rounded-full"></div>
+                        </div>
+                        <div class="tooltip-pixel absolute -top-12 left-1/2 -translate-x-1/2 hidden bg-black dark:bg-white text-white dark:text-black px-3 py-2 border-2 border-black dark:border-white whitespace-nowrap items-center gap-3 z-20">
+                            <span class="material-symbols-outlined text-sm">javascript</span>
+                            <span class="material-symbols-outlined text-sm">api</span>
+                            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-black dark:bg-white border-b-2 border-r-2 border-black dark:border-white rotate-45"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Cartridge 3 -->
+                    <div class="group relative bg-gray-100 dark:bg-[#1c1c1c] border-4 border-black dark:border-white flex flex-col items-center p-6 transition-all duration-75 cartridge-hover cursor-pointer aspect-[3/4] justify-between">
+                        <div class="w-full h-2/3 border-2 border-black/40 dark:border-white/40 bg-white dark:bg-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-500 to-transparent"></div>
+                            <span class="material-symbols-outlined text-6xl text-black/80 dark:text-white/80 pixelated">database</span>
+                        </div>
+                        <div class="w-full text-center mt-4">
+                            <h2 class="text-black dark:text-white text-lg font-bold leading-tight uppercase tracking-tighter mb-2">Data Core</h2>
+                            <div class="h-1 w-full bg-black/20 dark:bg-white/20 rounded-full"></div>
+                        </div>
+                        <div class="tooltip-pixel absolute -top-12 left-1/2 -translate-x-1/2 hidden bg-black dark:bg-white text-white dark:text-black px-3 py-2 border-2 border-black dark:border-white whitespace-nowrap items-center gap-3 z-20">
+                            <span class="material-symbols-outlined text-sm">storage</span>
+                            <span class="material-symbols-outlined text-sm">schema</span>
+                            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-black dark:bg-white border-b-2 border-r-2 border-black dark:border-white rotate-45"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Cartridge 4 -->
+                    <div class="group relative bg-gray-100 dark:bg-[#1c1c1c] border-4 border-black dark:border-white flex flex-col items-center p-6 transition-all duration-75 cartridge-hover cursor-pointer aspect-[3/4] justify-between">
+                        <div class="w-full h-2/3 border-2 border-black/40 dark:border-white/40 bg-white dark:bg-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-500 to-transparent"></div>
+                            <span class="material-symbols-outlined text-6xl text-black/80 dark:text-white/80 pixelated">monitoring</span>
+                        </div>
+                        <div class="w-full text-center mt-4">
+                            <h2 class="text-black dark:text-white text-lg font-bold leading-tight uppercase tracking-tighter mb-2">Void Graph</h2>
+                            <div class="h-1 w-full bg-black/20 dark:bg-white/20 rounded-full"></div>
+                        </div>
+                        <div class="tooltip-pixel absolute -top-12 left-1/2 -translate-x-1/2 hidden bg-black dark:bg-white text-white dark:text-black px-3 py-2 border-2 border-black dark:border-white whitespace-nowrap items-center gap-3 z-20">
+                            <span class="material-symbols-outlined text-sm">query_stats</span>
+                            <span class="material-symbols-outlined text-sm">hub</span>
+                            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-black dark:bg-white border-b-2 border-r-2 border-black dark:border-white rotate-45"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Cartridge 5 -->
+                    <div class="group relative bg-gray-100 dark:bg-[#1c1c1c] border-4 border-black dark:border-white flex flex-col items-center p-6 transition-all duration-75 cartridge-hover cursor-pointer aspect-[3/4] justify-between">
+                        <div class="w-full h-2/3 border-2 border-black/40 dark:border-white/40 bg-white dark:bg-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-500 to-transparent"></div>
+                            <span class="material-symbols-outlined text-6xl text-black/80 dark:text-white/80 pixelated">security</span>
+                        </div>
+                        <div class="w-full text-center mt-4">
+                            <h2 class="text-black dark:text-white text-lg font-bold leading-tight uppercase tracking-tighter mb-2">Key Crypt</h2>
+                            <div class="h-1 w-full bg-black/20 dark:bg-white/20 rounded-full"></div>
+                        </div>
+                        <div class="tooltip-pixel absolute -top-12 left-1/2 -translate-x-1/2 hidden bg-black dark:bg-white text-white dark:text-black px-3 py-2 border-2 border-black dark:border-white whitespace-nowrap items-center gap-3 z-20">
+                            <span class="material-symbols-outlined text-sm">lock</span>
+                            <span class="material-symbols-outlined text-sm">key</span>
+                            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-black dark:bg-white border-b-2 border-r-2 border-black dark:border-white rotate-45"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Cartridge 6 -->
+                    <div class="group relative bg-gray-100 dark:bg-[#1c1c1c] border-4 border-black dark:border-white flex flex-col items-center p-6 transition-all duration-75 cartridge-hover cursor-pointer aspect-[3/4] justify-between">
+                        <div class="w-full h-2/3 border-2 border-black/40 dark:border-white/40 bg-white dark:bg-[#0a0a0a] flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-500 to-transparent"></div>
+                            <span class="material-symbols-outlined text-6xl text-black/80 dark:text-white/80 pixelated">cloud</span>
+                        </div>
+                        <div class="w-full text-center mt-4">
+                            <h2 class="text-black dark:text-white text-lg font-bold leading-tight uppercase tracking-tighter mb-2">Sky Link</h2>
+                            <div class="h-1 w-full bg-black/20 dark:bg-white/20 rounded-full"></div>
+                        </div>
+                        <div class="tooltip-pixel absolute -top-12 left-1/2 -translate-x-1/2 hidden bg-black dark:bg-white text-white dark:text-black px-3 py-2 border-2 border-black dark:border-white whitespace-nowrap items-center gap-3 z-20">
+                            <span class="material-symbols-outlined text-sm">cloud_sync</span>
+                            <span class="material-symbols-outlined text-sm">dns</span>
+                            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-black dark:bg-white border-b-2 border-r-2 border-black dark:border-white rotate-45"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                    <!-- TextGrid / Tech Stack Icons -->
+                    <div class="w-full pb-10">
+                        <div class="mb-6">
+                            <h3 class="text-black/60 dark:text-white/60 text-sm uppercase tracking-[0.3em] text-center"><span data-lang-en="Compatible Hardware" data-lang-es="Hardware Compatible">Compatible Hardware</span></h3>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+                    <div class="flex flex-col items-center gap-3 p-6 border-4 border-black/5 dark:border-white/5 bg-white/40 dark:bg-black/40 grayscale hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined text-4xl text-black dark:text-white">code_blocks</span>
+                        <div class="text-center">
+                            <h4 class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">TypeScript</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center gap-3 p-6 border-4 border-black/5 dark:border-white/5 bg-white/40 dark:bg-black/40 grayscale hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined text-4xl text-black dark:text-white">grid_view</span>
+                        <div class="text-center">
+                            <h4 class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">React</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center gap-3 p-6 border-4 border-black/5 dark:border-white/5 bg-white/40 dark:bg-black/40 grayscale hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined text-4xl text-black dark:text-white">javascript</span>
+                        <div class="text-center">
+                            <h4 class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Node.js</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center gap-3 p-6 border-4 border-black/5 dark:border-white/5 bg-white/40 dark:bg-black/40 grayscale hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined text-4xl text-black dark:text-white">database</span>
+                        <div class="text-center">
+                            <h4 class="text-black dark:text-white text-xs font-bold uppercase tracking-widest">Postgres</h4>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <footer class="mt-auto border-t-4 border-black dark:border-white pt-10 pb-20 px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-black/40 dark:text-white/40 text-xs font-bold uppercase tracking-[0.2em]">
+                            © 2026 MZ. ALL RIGHTS RESERVED.
+                        </div>
+                        <div class="flex gap-6">
+                            <a class="text-black dark:text-white hover:text-primary transition-colors font-bold uppercase text-xs" href="https://linkedin.com" target="_blank">LinkedIn</a>
+                            <a class="text-black dark:text-white hover:text-primary transition-colors font-bold uppercase text-xs" href="#">Resume</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        html.classList.toggle('dark', savedTheme === 'dark');
+        
+        function toggleTheme() {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        }
+        
+        themeToggle.addEventListener('click', toggleTheme);
+        if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+            mobileNav.classList.toggle('flex');
+        });
+
+        // Language Toggle
+        const langToggle = document.getElementById('lang-toggle');
+        const langToggleMobile = document.getElementById('lang-toggle-mobile');
+        const langLabel = document.getElementById('lang-label');
+        
+        let currentLang = localStorage.getItem('lang') || 'en';
+        
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            langLabel.textContent = lang === 'en' ? 'ES' : 'EN';
+            
+            document.querySelectorAll('[data-lang-en]').forEach(el => {
+                el.innerHTML = lang === 'en' ? el.dataset.langEn : el.dataset.langEs;
+            });
+        }
+        
+        function toggleLanguage() {
+            setLanguage(currentLang === 'en' ? 'es' : 'en');
+        }
+        
+        setLanguage(currentLang);
+        
+        langToggle.addEventListener('click', toggleLanguage);
+        if (langToggleMobile) langToggleMobile.addEventListener('click', toggleLanguage);
+    </script>
+</body>
+</html>
