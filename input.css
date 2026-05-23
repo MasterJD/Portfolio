@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    line-height: 1;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+header {
+    min-height: 88px;
+}

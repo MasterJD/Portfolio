@@ -1,0 +1,36 @@
+{
+  "en": {
+    "projects": [
+      {
+        "id": 1,
+        "title": "Planning Tool",
+        "description": "A comprehensive planning and task management tool designed to help teams organize their workflow efficiently. Features include drag-and-drop task boards, deadline tracking, and team collaboration capabilities."
+      }
+    ],
+    "plannedProjectsTitle": "Planned Personal Projects",
+    "plannedProjects": [
+      "Personal AI copilot for software lifecycle decisions",
+      "Cloud cost observability dashboard with anomaly alerts",
+      "Pixel-inspired design system and component library",
+      "End-to-end developer onboarding automation",
+      "LLM-powered code review assistant"
+    ]
+  },
+  "es": {
+    "projects": [
+      {
+        "id": 1,
+        "title": "Herramienta de Planificación",
+        "description": "Suite de planificación y tareas para equipos. Incluye tableros drag-and-drop, seguimiento de plazos y colaboración en tiempo real."
+      }
+    ],
+    "plannedProjectsTitle": "Proyectos Personales Planeados",
+    "plannedProjects": [
+      "Copiloto de IA para decisiones del ciclo de vida del software",
+      "Panel de observabilidad de costos cloud con alertas de anomalías",
+      "Sistema de diseño y librería de componentes estilo pixel",
+      "Automatización completa del onboarding de desarrolladores",
+      "Asistente de revisión de código con LLMs"
+    ]
+  }
+}

@@ -5,33 +5,30 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Contact - Pixel Edition</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#dc2626",
-                        "background-light": "#ffffff",
-                        "background-dark": "#0a0a0a",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                },
-            },
-        }
+        (function () {
+            const storedTheme = localStorage.getItem('theme') || 'dark';
+            if (storedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+            const storedLang = localStorage.getItem('lang') || 'en';
+            document.documentElement.dataset.lang = storedLang;
+            document.documentElement.lang = storedLang;
+        })();
     </script>
+    <link href="tailwind.css" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=optional" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=optional" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet" />
     <style>
+        html {
+            scrollbar-gutter: stable;
+        }
         body {
             background-image: 
                 linear-gradient(rgba(128, 128, 128, 0.05) 1px, transparent 1px),
@@ -43,6 +40,13 @@
                 linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         }
+        .material-symbols-outlined {
+            visibility: hidden;
+        }
+        .fonts-ready .material-symbols-outlined {
+            visibility: visible;
+        }
+
         .scanlines {
             background: linear-gradient(
                 rgba(18, 16, 16, 0) 50%,
@@ -67,29 +71,29 @@
             <!-- Header Section -->
             <div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
                 <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-                    <header class="flex items-center justify-between whitespace-nowrap border-b-4 border-solid border-black dark:border-white px-4 md:px-10 py-6 mb-8">
+                    <header class="flex items-center justify-between border-b-4 border-solid border-black dark:border-white px-4 md:px-10 py-6 mb-8">
                         <div class="flex items-center gap-4 text-black dark:text-white">
-                            <div class="size-9 flex items-center justify-center bg-black dark:bg-white text-white dark:text-black font-bold text-xl">
-                                MZ
+                            <div class="size-9 flex items-center justify-center bg-black dark:bg-white text-white dark:text-black">
+                                <span class="material-symbols-outlined">mail</span>
                             </div>
                             <h2 class="text-black dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] uppercase">Javier Donado</h2>
                         </div>
                         <div class="flex flex-1 justify-end gap-8 hidden md:flex">
                             <div class="flex items-center gap-9">
-                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="index.html">[ Home ]</a>
-                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="projects.html">[ Projects ]</a>
-                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="skills.html">[ Skills ]</a>
-                                <a class="text-primary text-sm font-bold leading-normal uppercase" href="contact.html">[ Contact ]</a>
+                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="index.html">[ <span data-lang-en="Home" data-lang-es="Inicio">Home</span> ]</a>
+                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="projects.html">[ <span data-lang-en="Projects" data-lang-es="Proyectos">Projects</span> ]</a>
+                                <a class="text-black dark:text-white text-sm font-bold leading-normal uppercase hover:text-primary transition-colors" href="skills.html">[ <span data-lang-en="Skills" data-lang-es="Habilidades">Skills</span> ]</a>
+                                <a class="text-primary text-sm font-bold leading-normal uppercase transition-colors" href="contact.html">[ <span data-lang-en="Contact" data-lang-es="Contacto">Contact</span> ]</a>
                             </div>
                             <div class="flex gap-2">
                                 <!-- Language Toggle Button -->
-                                <button id="lang-toggle" class="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all font-bold text-xs">
+                                <button id="lang-toggle" class="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors font-bold text-xs">
                                     <span id="lang-label">ES</span>
                                 </button>
                                 <!-- Theme Toggle Button -->
-                                <button id="theme-toggle" class="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
-                                    <span class="material-symbols-outlined text-lg dark:hidden">dark_mode</span>
-                                    <span class="material-symbols-outlined text-lg hidden dark:block">light_mode</span>
+                                <button id="theme-toggle" class="group flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-lg text-[#8FBCFF] group-hover:text-[#8FBCFF] dark:hidden">dark_mode</span>
+                                    <span class="material-symbols-outlined text-lg text-[#F5B027] group-hover:text-[#F5B027] hidden dark:block">light_mode</span>
                                 </button>
                             </div>
                         </div>
@@ -101,10 +105,10 @@
 
                     <!-- Mobile Navigation -->
                     <div id="mobile-nav" class="hidden md:hidden flex-col gap-4 px-4 pb-6 border-b-2 border-black dark:border-white mb-8">
-                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="index.html">[ Home ]</a>
-                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="projects.html">[ Projects ]</a>
-                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary" href="skills.html">[ Skills ]</a>
-                        <a class="text-primary text-sm font-bold uppercase" href="contact.html">[ Contact ]</a>
+                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary transition-colors" href="index.html">[ <span data-lang-en="Home" data-lang-es="Inicio">Home</span> ]</a>
+                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary transition-colors" href="projects.html">[ <span data-lang-en="Projects" data-lang-es="Proyectos">Projects</span> ]</a>
+                        <a class="text-black dark:text-white text-sm font-bold uppercase hover:text-primary transition-colors" href="skills.html">[ <span data-lang-en="Skills" data-lang-es="Habilidades">Skills</span> ]</a>
+                        <a class="text-primary text-sm font-bold uppercase transition-colors" href="contact.html">[ <span data-lang-en="Contact" data-lang-es="Contacto">Contact</span> ]</a>
                         <button id="lang-toggle-mobile" class="text-left text-black dark:text-white text-sm font-bold uppercase hover:text-primary">[ <span data-lang-en="Español" data-lang-es="English">Español</span> ]</button>
                         <button id="theme-toggle-mobile" class="text-left text-black dark:text-white text-sm font-bold uppercase hover:text-primary">[ <span data-lang-en="Toggle Theme" data-lang-es="Cambiar Tema">Toggle Theme</span> ]</button>
                     </div>
@@ -166,7 +170,6 @@
                         </div>
                         <div class="flex gap-6">
                             <a class="text-black dark:text-white hover:text-primary transition-colors font-bold uppercase text-xs" href="https://linkedin.com" target="_blank">LinkedIn</a>
-                            <a class="text-black dark:text-white hover:text-primary transition-colors font-bold uppercase text-xs" href="#">Resume</a>
                         </div>
                     </footer>
                 </div>
@@ -215,7 +218,18 @@
             langLabel.textContent = lang === 'en' ? 'ES' : 'EN';
             
             document.querySelectorAll('[data-lang-en]').forEach(el => {
-                el.innerHTML = lang === 'en' ? el.dataset.langEn : el.dataset.langEs;
+                if (el.closest('.no-auto-translate')) return;
+                el.textContent = lang === 'en' ? el.dataset.langEn : el.dataset.langEs;
+            });
+
+            document.querySelectorAll('.lang-en').forEach(el => {
+                if (lang === 'en') el.classList.remove('hidden');
+                else el.classList.add('hidden');
+            });
+            
+            document.querySelectorAll('.lang-es').forEach(el => {
+                if (lang === 'es') el.classList.remove('hidden');
+                else el.classList.add('hidden');
             });
         }
         
@@ -229,5 +243,6 @@
         langToggle.addEventListener('click', toggleLanguage);
         if (langToggleMobile) langToggleMobile.addEventListener('click', toggleLanguage);
     </script>
+    <script>if(document.fonts){document.fonts.ready.then(function(){document.documentElement.classList.add('fonts-ready')})}else{document.documentElement.classList.add('fonts-ready')}</script>
 </body>
 </html>
