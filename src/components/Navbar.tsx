@@ -72,12 +72,11 @@ export default function Navbar() {
               onClick={toggleTheme}
               className="group flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white transition-colors"
             >
-              <span className={`material-symbols-outlined text-lg text-[#8FBCFF] ${theme === 'light' ? '' : 'hidden'}`}>
-                dark_mode
-              </span>
-              <span className={`material-symbols-outlined text-lg text-[#F5B027] ${theme === 'dark' ? '' : 'hidden'}`}>
-                light_mode
-              </span>
+              {theme === 'light' ? (
+                <span className="material-symbols-outlined text-lg text-[#8FBCFF]">dark_mode</span>
+              ) : (
+                <span className="material-symbols-outlined text-lg text-[#F5B027]">light_mode</span>
+              )}
             </button>
           </div>
         </div>

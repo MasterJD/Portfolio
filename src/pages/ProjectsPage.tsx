@@ -77,10 +77,10 @@ export default function ProjectsPage() {
                   <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-500 to-transparent" />
                   <div dangerouslySetInnerHTML={{ __html: imageMarkup }} />
                 </div>
-                <div className="w-full text-center mt-4">
-                  <div className="flex flex-wrap justify-center gap-2 mb-3" dangerouslySetInnerHTML={{ __html: previewIcons }} />
+                <div className="w-full text-center mt-3">
                   <h2 className="text-black dark:text-white text-lg font-bold leading-tight uppercase tracking-tighter mb-2">{title}</h2>
-                  <div className="h-1 w-full bg-black/20 dark:bg-white/20 rounded-full" />
+                  <div className="flex flex-wrap justify-center gap-2 mb-3" dangerouslySetInnerHTML={{ __html: previewIcons }} />
+                  <div className="h-1 w-full bg-black/20 dark:bg-white/20 rounded-full mt-3" />
                 </div>
                 <div className="tooltip-pixel absolute -top-12 left-1/2 -translate-x-1/2 hidden bg-black dark:bg-white text-white dark:text-black px-3 py-2 border-2 border-black dark:border-white whitespace-nowrap items-center gap-3 z-20">
                   {project.technologies.slice(0, 3).map(tech => (

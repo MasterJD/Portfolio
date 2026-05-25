@@ -5,15 +5,31 @@
         "id": 1,
         "title": "Planning Tool",
         "description": "A comprehensive planning and task management tool designed to help teams organize their workflow efficiently. Features include drag-and-drop task boards, deadline tracking, and team collaboration capabilities."
+      },
+      {
+        "id": 2,
+        "title": "JPEG Image Handler",
+        "description": "TBD"
+      },
+      {
+        "id": 3,
+        "title": "Stocastic Gradient Descent",
+        "description": "TBD"
       }
     ],
     "plannedProjectsTitle": "Planned Personal Projects",
     "plannedProjects": [
-      "Personal AI copilot for software lifecycle decisions",
-      "Cloud cost observability dashboard with anomaly alerts",
-      "Pixel-inspired design system and component library",
-      "End-to-end developer onboarding automation",
-      "LLM-powered code review assistant"
+      "LLM-powered recipe tracking and recommendation platform (Web)",
+      "Monster Hunter Wilds API-based companion app (Mobile)",
+      "Multi-format file converter (Web)",
+      "Live meeting audio extractor with sentiment analysis and AI note-taking (Mobile)",
+      "LLM-powered code review assistant (Plugin)",
+      "AI-powered psychometric testing platform for test creation, delivery, and analysis (Web)",
+      "LLM-powered professional references and worker portfolio hub (Web)",
+      "Document versioning and approval management system for auditing workflows (Web)",
+      "AI-powered note-taking application (Web/Mobile)",
+      "Secure encrypted password vault application (Desktop/Local)",
+      "Anime opening and ending tracking database for watched shows (Web)"
     ]
   },
   "es": {
