@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import ProjectModal from '../components/ProjectModal'
 import { projects, techIconMap, type Project } from '../data/projects'
-import projectContent from '../data/projects-content.json'
 
 function getTechIconMarkup(tech: string, sizeClass: string, extraClasses = '') {
   const entry = techIconMap[tech]
@@ -15,17 +14,34 @@ function getTechIconMarkup(tech: string, sizeClass: string, extraClasses = '') {
 }
 
 export default function ProjectsPage() {
-  const { lang } = useLanguage()
+  const { lang, tKey, tKeyAll } = useLanguage()
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
-  const content = projectContent[lang] || projectContent.en
-  const plannedProjects = content.plannedProjects || []
-  const plannedProjectsTitle = content.plannedProjectsTitle || 'Planned Personal Projects'
+  const projectList = tKeyAll<Record<string, {
+    title: { english: string; spanish: string }
+    description: { english: string; spanish: string }
+    purpose: { english: string; spanish: string }
+    status: { english: string; spanish: string }
+    technologies: string[]
+  }>>('projects.list')
 
-  const getProjectCopy = (projectId: number) =>
-    content.projects.find(p => p.id === projectId) || null
+  const plannedProjects = tKeyAll<{
+    title: { english: string; spanish: string }
+    description: { english: string; spanish: string }
+    technologies: string[]
+  }[]>('projects.planned')
 
-  const getPlannedProjectsContent = () => content
+  const getProjectCopy = (projectId: number) => {
+    const p = projectList[String(projectId)]
+    if (!p) return null
+    return {
+      id: projectId,
+      title: lang === 'en' ? p.title.english : p.title.spanish,
+      description: lang === 'en' ? p.description.english : p.description.spanish,
+      purpose: lang === 'en' ? p.purpose.english : p.purpose.spanish,
+      status: lang === 'en' ? p.status.english : p.status.spanish,
+    }
+  }
 
   return (
     <>
@@ -40,9 +56,7 @@ export default function ProjectsPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-black via-transparent to-transparent" />
           <div className="relative z-10 p-8 text-center">
             <p className="text-black/70 dark:text-white/70 tracking-wider text-base font-medium leading-relaxed max-w-xl mx-auto">
-              {lang === 'en'
-                ? "Here's a selection of projects I've worked on, showcasing different technologies and problem-solving approaches."
-                : 'Aquí hay una selección de proyectos en los que he trabajado, mostrando diferentes tecnologías y enfoques de resolución de problemas.'}
+              {tKey('projects.pageSubtitle')}
             </p>
           </div>
         </div>
@@ -50,7 +64,7 @@ export default function ProjectsPage() {
 
       <div className="w-full py-8">
         <h1 className="text-black dark:text-white tracking-widest text-xl font-bold leading-tight text-center uppercase">
-          {lang === 'en' ? '< My Projects Gallery />' : '< Galería de Proyectos />'}
+          {tKey('projects.pageTitle')}
         </h1>
       </div>
 
@@ -101,13 +115,13 @@ export default function ProjectsPage() {
           </div>
           <div className="mt-3">
             <h2 className="text-black dark:text-white text-base font-bold uppercase tracking-widest mb-4">
-              {plannedProjectsTitle}
+              {tKey('projects.plannedTitle')}
             </h2>
             <ul className="flex flex-col gap-2 text-black/80 dark:text-white/80 text-sm leading-relaxed">
               {plannedProjects.map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="text-primary font-bold">&gt;</span>
-                  <span>{item}</span>
+                  <span>{lang === 'en' ? item.title.english : item.title.spanish}</span>
                 </li>
               ))}
             </ul>

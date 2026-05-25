@@ -11,16 +11,16 @@ const iconByPath: Record<string, string> = {
 }
 
 const navLinks = [
-  { path: '/', en: 'Home', es: 'Inicio' },
-  { path: '/projects', en: 'Projects', es: 'Proyectos' },
-  { path: '/skills', en: 'Skills', es: 'Habilidades' },
-  { path: '/contact', en: 'Contact', es: 'Contacto' },
+  { path: '/', key: 'navbar.home' },
+  { path: '/projects', key: 'navbar.projects' },
+  { path: '/skills', key: 'navbar.skills' },
+  { path: '/contact', key: 'navbar.contact' },
 ]
 
 export default function Navbar() {
   const location = useLocation()
   const { theme, toggleTheme } = useTheme()
-  const { lang, setLang, t } = useLanguage()
+  const { lang, setLang, tKey } = useLanguage()
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const currentIcon = iconByPath[location.pathname] || 'home'
@@ -36,7 +36,7 @@ export default function Navbar() {
             <span className="material-symbols-outlined">{currentIcon}</span>
           </div>
           <h2 className="text-black dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] uppercase">
-            Javier Donado
+            {tKey('navbar.title')}
           </h2>
         </Link>
 
@@ -54,7 +54,7 @@ export default function Navbar() {
                       : 'text-black dark:text-white hover:text-primary'
                   }`}
                 >
-                  [ {link.en === 'Home' && link.es === 'Inicio' ? t('Home', 'Inicio') : t(link.en, link.es)} ]
+                  [ {tKey(link.key)} ]
                 </Link>
               )
             })}
@@ -64,6 +64,7 @@ export default function Navbar() {
             <button
               onClick={toggleLang}
               className="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors font-bold text-xs"
+              title={tKey('tooltips.switchLang')}
             >
               <span>{lang === 'en' ? 'ES' : 'EN'}</span>
             </button>
@@ -71,6 +72,7 @@ export default function Navbar() {
             <button
               onClick={toggleTheme}
               className="group flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-transparent text-black dark:text-white transition-colors"
+              title={tKey('tooltips.toggleTheme')}
             >
               {theme === 'light' ? (
                 <span className="material-symbols-outlined text-lg text-[#8FBCFF]">dark_mode</span>
@@ -102,7 +104,7 @@ export default function Navbar() {
                   isActive ? 'text-primary' : 'text-black dark:text-white hover:text-primary'
                 }`}
               >
-                [ {t(link.en, link.es)} ]
+                [ {tKey(link.key)} ]
               </Link>
             )
           })}
@@ -110,13 +112,13 @@ export default function Navbar() {
             onClick={toggleLang}
             className="text-left text-black dark:text-white text-sm font-bold uppercase hover:text-primary transition-colors"
           >
-            [ {t('Español', 'English')} ]
+            [ {tKey('navbar.switchLang')} ]
           </button>
           <button
             onClick={toggleTheme}
             className="text-left text-black dark:text-white text-sm font-bold uppercase hover:text-primary transition-colors"
           >
-            [ {t('Toggle Theme', 'Cambiar Tema')} ]
+            [ {tKey('navbar.toggleTheme')} ]
           </button>
         </div>
       )}

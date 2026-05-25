@@ -1,0 +1,1103 @@
+{
+  "navbar": {
+    "title": {
+      "english": "Javier Donado",
+      "spanish": "Javier Donado"
+    },
+    "home": {
+      "english": "Home",
+      "spanish": "Inicio"
+    },
+    "projects": {
+      "english": "Projects",
+      "spanish": "Proyectos"
+    },
+    "skills": {
+      "english": "Skills",
+      "spanish": "Habilidades"
+    },
+    "contact": {
+      "english": "Contact",
+      "spanish": "Contacto"
+    },
+    "switchLang": {
+      "english": "Español",
+      "spanish": "English"
+    },
+    "toggleTheme": {
+      "english": "Toggle Theme",
+      "spanish": "Cambiar Tema"
+    }
+  },
+  "hero": {
+    "terminalLabel": {
+      "english": "Terminal_Output",
+      "spanish": "Terminal_Output"
+    },
+    "command": {
+      "english": "$ system_boot --mode=ai_engineer",
+      "spanish": "$ system_boot --mode=ai_engineer"
+    },
+    "greetingEn": {
+      "english": "Hello, I'm an <span class=\"text-primary\">Software Engineer</span> & Full-Stack Developer.",
+      "spanish": "Hello, I'm an <span class=\"text-primary\">Software Engineer</span> & Full-Stack Developer."
+    },
+    "greetingEs": {
+      "english": "Hola, soy un <span class=\"text-primary\">Ingeniero de Software</span> y Desarrollador Full-Stack.",
+      "spanish": "Hola, soy un <span class=\"text-primary\">Ingeniero de Software</span> y Desarrollador Full-Stack."
+    },
+    "subtitle1": {
+      "english": "MSc in Software Design & Development with Emphasis on AI, LLM Integration, and Cloud Software Architecture.",
+      "spanish": "Máster en Diseño y Desarrollo de Software con Énfasis en IA, Integración de LLMs y Arquitectura de Software en la Nube."
+    },
+    "subtitle2": {
+      "english": "Specializing in AI-driven development, AI-assisted engineering, prompt engineering, LLM orchestration, cloud architectures, intelligent automation, and building scalable systems across the full software lifecycle.",
+      "spanish": "Especializado en AI-driven development, AI-assisted engineering, prompt engineering, orquestación de LLMs, arquitecturas cloud, automatización inteligente y construcción de sistemas escalables a lo largo del ciclo de vida del software."
+    },
+    "viewProjects": {
+      "english": "View Projects",
+      "spanish": "Ver Proyectos"
+    },
+    "contact": {
+      "english": "Contact",
+      "spanish": "Contactar"
+    }
+  },
+  "highlights": {
+    "sectionTitle": {
+      "english": "Highlights",
+      "spanish": "Destacados"
+    },
+    "items": [
+      {
+        "icon": "psychology",
+        "title": {
+          "english": "AI",
+          "spanish": "IA"
+        },
+        "desc": {
+          "english": "LLMs, APIs & Models",
+          "spanish": "LLMs, APIs y Modelos"
+        }
+      },
+      {
+        "icon": "code",
+        "title": {
+          "english": "Full Stack Development",
+          "spanish": "Desarrollo Full Stack"
+        },
+        "desc": {
+          "english": "Frontend & Backend Systems",
+          "spanish": "Sistemas Frontend y Backend"
+        }
+      },
+      {
+        "icon": "view_timeline",
+        "title": {
+          "english": "Software Lifecycle",
+          "spanish": "Ciclo de Vida del Software"
+        },
+        "desc": {
+          "english": "Design, Test & Maintain",
+          "spanish": "Diseñar, Probar y Mantener"
+        }
+      },
+      {
+        "icon": "cloud",
+        "title": {
+          "english": "Cloud Architecture",
+          "spanish": "Arquitectura Cloud"
+        },
+        "desc": {
+          "english": "Scalable & Resilient Systems",
+          "spanish": "Sistemas Escalables y Resilientes"
+        }
+      },
+      {
+        "icon": "palette",
+        "title": {
+          "english": "Design Choices",
+          "spanish": "Decisiones de Diseño"
+        },
+        "desc": {
+          "english": "Architecture & UX Decisions",
+          "spanish": "Decisiones de Arquitectura y UX"
+        }
+      }
+    ]
+  },
+  "projects": {
+    "pageTitle": {
+      "english": "< My Projects Gallery />",
+      "spanish": "< Galería de Proyectos />"
+    },
+    "pageSubtitle": {
+      "english": "Here's a selection of projects I've worked on, showcasing different technologies and problem-solving approaches.",
+      "spanish": "Aquí hay una selección de proyectos en los que he trabajado, mostrando diferentes tecnologías y enfoques de resolución de problemas."
+    },
+    "plannedTitle": {
+      "english": "Planned Personal Projects",
+      "spanish": "Proyectos Personales Planeados"
+    },
+    "list": {
+      "1": {
+        "title": {
+          "english": "Planning Tool",
+          "spanish": "Herramienta de Planificación"
+        },
+        "description": {
+          "english": "A comprehensive planning and task management tool designed to help teams organize their workflow efficiently. Features include drag-and-drop task boards, deadline tracking, and team collaboration capabilities.",
+          "spanish": "Una herramienta integral de planificación y gestión de tareas diseñada para ayudar a los equipos a organizar su flujo de trabajo de manera eficiente. Incluye tableros de tareas drag-and-drop, seguimiento de plazos y capacidades de colaboración en equipo."
+        },
+        "purpose": {
+          "english": "Streamline team task management and workflow organization.",
+          "spanish": "Optimizar la gestión de tareas del equipo y la organización del flujo de trabajo."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "PHP",
+          "Bootstrap",
+          "MySQL",
+          "HTML",
+          "CSS"
+        ]
+      },
+      "2": {
+        "title": {
+          "english": "JPEG Image Handler",
+          "spanish": "Manejador de Imágenes JPEG"
+        },
+        "description": {
+          "english": "A Java-based application for processing and manipulating JPEG images, implementing compression algorithms and image transformation techniques for efficient handling of digital imagery.",
+          "spanish": "Una aplicación basada en Java para procesar y manipular imágenes JPEG, implementando algoritmos de compresión y técnicas de transformación de imágenes para el manejo eficiente de imágenes digitales."
+        },
+        "purpose": {
+          "english": "Demonstrate low-level image processing and compression algorithm implementation.",
+          "spanish": "Demostrar el procesamiento de imágenes de bajo nivel y la implementación de algoritmos de compresión."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Java"
+        ]
+      },
+      "3": {
+        "title": {
+          "english": "Stochastic Gradient Descent",
+          "spanish": "Descenso de Gradiente Estocástico"
+        },
+        "description": {
+          "english": "Implementation of the Stochastic Gradient Descent optimization algorithm from scratch in Java, demonstrating fundamental machine learning optimization techniques for finding function minima.",
+          "spanish": "Implementación del algoritmo de optimización de Descenso de Gradiente Estocástico desde cero en Java, demostrando técnicas fundamentales de optimización de aprendizaje automático para encontrar mínimos de funciones."
+        },
+        "purpose": {
+          "english": "Illustrate core ML optimization algorithms and numerical computing concepts.",
+          "spanish": "Ilustrar algoritmos de optimización de ML y conceptos de computación numérica."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Java"
+        ]
+      },
+      "4": {
+        "title": {
+          "english": "Recursion & Automata Theory",
+          "spanish": "Recursión y Teoría de Autómatas"
+        },
+        "description": {
+          "english": "A collection of algorithms exploring recursion, deterministic finite automata (DFA), non-deterministic finite automata (NFA), and context-free grammars. Demonstrates fundamental computer science concepts in language theory.",
+          "spanish": "Una colección de algoritmos que exploran la recursión, autómatas finitos deterministas (DFA), autómatas finitos no deterministas (NFA) y gramáticas libres de contexto. Demuestra conceptos fundamentales de ciencias de la computación en teoría de lenguajes."
+        },
+        "purpose": {
+          "english": "Explore formal language theory and recursive algorithm design.",
+          "spanish": "Explorar la teoría formal de lenguajes y el diseño de algoritmos recursivos."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Java"
+        ]
+      },
+      "5": {
+        "title": {
+          "english": "Koch Fractal Generator",
+          "spanish": "Generador de Fractal Koch"
+        },
+        "description": {
+          "english": "A Python application that generates the Koch snowflake fractal using turtle graphics. Implements recursive geometric transformations to create complex fractal patterns from simple base shapes.",
+          "spanish": "Una aplicación Python que genera el copo de nieve de Koch usando gráficos de tortuga. Implementa transformaciones geométricas recursivas para crear patrones fractales complejos a partir de formas base simples."
+        },
+        "purpose": {
+          "english": "Visualize recursive geometric patterns and fractal mathematics.",
+          "spanish": "Visualizar patrones geométricos recursivos y matemáticas fractales."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Python",
+          "PyTurtle"
+        ]
+      },
+      "6": {
+        "title": {
+          "english": "Taylor Approximation",
+          "spanish": "Aproximación de Taylor"
+        },
+        "description": {
+          "english": "A C program that computes and visualizes Taylor series approximations of mathematical functions, demonstrating how infinite series can approximate complex functions with polynomial expansions.",
+          "spanish": "Un programa en C que calcula y visualiza aproximaciones de series de Taylor de funciones matemáticas, demostrando cómo las series infinitas pueden aproximar funciones complejas con expansiones polinomiales."
+        },
+        "purpose": {
+          "english": "Demonstrate numerical methods and series expansion concepts.",
+          "spanish": "Demostrar métodos numéricos y conceptos de expansión en series."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "C"
+        ]
+      },
+      "7": {
+        "title": {
+          "english": "Projectile Motion Simulator",
+          "spanish": "Simulador de Movimiento de Proyectiles"
+        },
+        "description": {
+          "english": "A Python physics simulator with a Tkinter GUI that models projectile motion under various initial conditions. Visualizes trajectories, calculates range, height, and time of flight with real-time plotting.",
+          "spanish": "Un simulador de física en Python con interfaz gráfica Tkinter que modela el movimiento de proyectiles bajo diversas condiciones iniciales. Visualiza trayectorias, calcula alcance, altura y tiempo de vuelo con gráficos en tiempo real."
+        },
+        "purpose": {
+          "english": "Simulate and visualize projectile physics with interactive controls.",
+          "spanish": "Simular y visualizar la física de proyectiles con controles interactivos."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Python",
+          "TKinter",
+          "MatplotLib"
+        ]
+      },
+      "8": {
+        "title": {
+          "english": "Employee Time Tracking System",
+          "spanish": "Sistema de Registro de Horas"
+        },
+        "description": {
+          "english": "A web-based employee time tracking and attendance management system built with PHP and MySQL. Features include clock-in/out functionality, work hour reports, and administrative oversight dashboards.",
+          "spanish": "Un sistema web de seguimiento de tiempo y gestión de asistencia de empleados construido con PHP y MySQL. Incluye funcionalidad de entrada/salida, informes de horas trabajadas y paneles de supervisión administrativa."
+        },
+        "purpose": {
+          "english": "Automate employee attendance tracking and report generation.",
+          "spanish": "Automatizar el seguimiento de asistencia de empleados y la generación de informes."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "PHP",
+          "Javascript",
+          "JQuery",
+          "MySQL",
+          "Bootstrap",
+          "WAMP Server"
+        ]
+      },
+      "9": {
+        "title": {
+          "english": "Online Store",
+          "spanish": "Tienda en Línea"
+        },
+        "description": {
+          "english": "A full-stack e-commerce platform built with Angular and Firebase, featuring product catalog management, user authentication, shopping cart functionality, and secure checkout processing with encrypted data handling.",
+          "spanish": "Una plataforma de comercio electrónico full-stack construida con Angular y Firebase, con gestión de catálogo de productos, autenticación de usuarios, funcionalidad de carrito de compras y procesamiento de pago seguro con manejo de datos encriptados."
+        },
+        "purpose": {
+          "english": "Build a production-ready e-commerce platform with secure transactions.",
+          "spanish": "Construir una plataforma de comercio electrónico lista para producción con transacciones seguras."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Angular",
+          "Typescript",
+          "Angular Material",
+          "Firebase",
+          "Node.js",
+          "Crypto.js",
+          "Express"
+        ]
+      },
+      "10": {
+        "title": {
+          "english": "Salt & Pepper Noise Algorithm",
+          "spanish": "Algoritmo de Ruido Sal y Pimienta"
+        },
+        "description": {
+          "english": "A Python implementation of salt and pepper noise generation and filtering algorithms. Features both noise injection for testing purposes and median filter-based denoising for image restoration using computer vision techniques.",
+          "spanish": "Una implementación en Python de algoritmos de generación y filtrado de ruido sal y pimienta. Incluye tanto inyección de ruido para propósitos de prueba como eliminación de ruido basada en filtros de mediana para restauración de imágenes usando técnicas de visión por computadora."
+        },
+        "purpose": {
+          "english": "Explore image noise processing and fundamental computer vision algorithms.",
+          "spanish": "Explorar el procesamiento de ruido de imágenes y algoritmos fundamentales de visión por computadora."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Python",
+          "TKinter",
+          "MatplotLib",
+          "Numpy",
+          "CV2"
+        ]
+      },
+      "11": {
+        "title": {
+          "english": "SuperHero Database",
+          "spanish": "Base de Datos de Superhéroes"
+        },
+        "description": {
+          "english": "An Angular-powered superhero database application that allows users to browse, search, and manage superhero profiles. Integrates with a MySQL backend for persistent data storage and features rich Angular Material UI components.",
+          "spanish": "Una aplicación de base de datos de superhéroes impulsada por Angular que permite a los usuarios navegar, buscar y gestionar perfiles de superhéroes. Se integra con un backend MySQL para almacenamiento persistente de datos y cuenta con componentes de interfaz de Angular Material."
+        },
+        "purpose": {
+          "english": "Create an interactive data management interface with Angular and MySQL.",
+          "spanish": "Crear una interfaz interactiva de gestión de datos con Angular y MySQL."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Angular",
+          "Typescript",
+          "MySQL",
+          "Angular Material",
+          "Node.js",
+          "Crypto.js",
+          "Express"
+        ]
+      },
+      "12": {
+        "title": {
+          "english": "Scarlett",
+          "spanish": "Scarlett"
+        },
+        "description": {
+          "english": "An intelligent job matching platform built with Angular and Firebase that connects candidates with companies through smart profile analysis, real-time applications, and automated skill-based recommendations. The platform provides modern dashboards for recruiters and applicants, secure authentication, responsive Material Design interfaces, and scalable cloud-based infrastructure.",
+          "spanish": "Una plataforma inteligente de búsqueda y reclutamiento desarrollada con Angular y Firebase que conecta candidatos con empresas mediante análisis inteligente de perfiles, aplicaciones en tiempo real y recomendaciones automatizadas basadas en habilidades. La plataforma ofrece paneles modernos para reclutadores y postulantes, autenticación segura, interfaces responsivas con Material Design e infraestructura escalable en la nube."
+        },
+        "purpose": {
+          "english": "Create a smart recruitment ecosystem that helps companies find the best applicants while enabling candidates to discover opportunities that match their skills, experience, and career goals.",
+          "spanish": "Crear un ecosistema inteligente de reclutamiento que ayude a las empresas a encontrar a los mejores candidatos mientras permite a los postulantes descubrir oportunidades que coincidan con sus habilidades, experiencia y objetivos profesionales."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Angular",
+          "TypeScript",
+          "Firebase",
+          "Angular Material",
+          "Node.js",
+          "Express",
+          "Crypto.js",
+          "Firestore",
+          "Firebase Authentication",
+          "Firebase Hosting",
+          "RxJS",
+          "REST APIs"
+        ]
+      },
+      "13": {
+        "title": {
+          "english": "LaTeX Equation Viewer",
+          "spanish": "Visor de Ecuaciones LaTeX"
+        },
+        "description": {
+          "english": "A web application for rendering and viewing LaTeX mathematical equations. Uses MongoDB for equation storage and EJS templating for server-side rendering, with a clean Bootstrap interface for browsing equation collections.",
+          "spanish": "Una aplicación web para renderizar y visualizar ecuaciones matemáticas LaTeX. Usa MongoDB para almacenamiento de ecuaciones y plantillas EJS para renderizado del lado del servidor, con una interfaz Bootstrap limpia para navegar colecciones de ecuaciones."
+        },
+        "purpose": {
+          "english": "Provide a searchable repository of mathematical equations rendered in LaTeX.",
+          "spanish": "Proveer un repositorio buscable de ecuaciones matemáticas renderizadas en LaTeX."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "MongoDB",
+          "EJS",
+          "Bootstrap"
+        ]
+      },
+      "14": {
+        "title": {
+          "english": "Euler's Method Approximation",
+          "spanish": "Aproximación por Método de Euler"
+        },
+        "description": {
+          "english": "An interactive web tool for approximating solutions to ordinary differential equations using Euler's method. Features real-time visualization of approximation steps and comparison with exact solutions where available.",
+          "spanish": "Una herramienta web interactiva para aproximar soluciones de ecuaciones diferenciales ordinarias usando el método de Euler. Incluye visualización en tiempo real de los pasos de aproximación y comparación con soluciones exactas cuando están disponibles."
+        },
+        "purpose": {
+          "english": "Visualize numerical methods for solving differential equations interactively.",
+          "spanish": "Visualizar métodos numéricos para resolver ecuaciones diferenciales de forma interactiva."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Math.js",
+          "Javascript",
+          "HTML",
+          "Bootstrap"
+        ]
+      },
+      "15": {
+        "title": {
+          "english": "Runge-Kutta Approximation",
+          "spanish": "Aproximación Runge-Kutta"
+        },
+        "description": {
+          "english": "An interactive web-based implementation of the Runge-Kutta method for solving ordinary differential equations. Provides higher-order approximation accuracy with step-by-step visualization and comparison features.",
+          "spanish": "Una implementación web interactiva del método Runge-Kutta para resolver ecuaciones diferenciales ordinarias. Proporciona precisión de aproximación de orden superior con visualización paso a paso y funciones de comparación."
+        },
+        "purpose": {
+          "english": "Demonstrate advanced numerical methods for differential equations.",
+          "spanish": "Demostrar métodos numéricos avanzados para ecuaciones diferenciales."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "Math.js",
+          "Javascript",
+          "HTML",
+          "Bootstrap"
+        ]
+      },
+      "16": {
+        "title": {
+          "english": "YT Synced Watch",
+          "spanish": "YT Synced Watch"
+        },
+        "description": {
+          "english": "A synchronized YouTube video watching platform that enables multiple users to watch videos together in real-time. Built with React and Firebase, featuring synchronized playback controls, room creation, and chat functionality.",
+          "spanish": "Una plataforma de visualización sincronizada de YouTube que permite a múltiples usuarios ver videos juntos en tiempo real. Construida con React y Firebase, con controles de reproducción sincronizados, creación de salas y funcionalidad de chat."
+        },
+        "purpose": {
+          "english": "Enable synchronized video watching experiences for remote groups.",
+          "spanish": "Permitir experiencias de visualización de videos sincronizadas para grupos remotos."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "React",
+          "Typescript",
+          "Vite",
+          "Firebase",
+          "Tailwind CSS",
+          "Jest",
+          "Node.js"
+        ]
+      },
+      "17": {
+        "title": {
+          "english": "ZDQuest",
+          "spanish": "ZDQuest"
+        },
+        "description": {
+          "english": "A modern emulation resource library and community guide platform focused on preserving gaming knowledge, emulator setup documentation, compatibility resources, and curated tools for retro gaming enthusiasts. The platform centralizes tutorials, emulator information, BIOS guidance, platform compatibility references, and educational content through an organized and responsive web interface.",
+          "spanish": "Una plataforma moderna de biblioteca de recursos y guías de emulación enfocada en preservar conocimiento sobre videojuegos, documentación de configuración de emuladores, recursos de compatibilidad y herramientas curadas para entusiastas del gaming retro. La plataforma centraliza tutoriales, información de emuladores, guías de BIOS, referencias de compatibilidad entre plataformas y contenido educativo mediante una interfaz web organizada y responsiva."
+        },
+        "purpose": {
+          "english": "Create a centralized educational hub for emulation resources, setup guides, compatibility references, and retro gaming preservation content.",
+          "spanish": "Crear un centro educativo centralizado para recursos de emulación, guías de configuración, referencias de compatibilidad y contenido relacionado con la preservación del gaming retro."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "React",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Node.js",
+          "Firebase",
+          "Responsive Design",
+          "REST APIs"
+        ]
+      },
+      "18": {
+        "title": {
+          "english": "Humanda",
+          "spanish": "Humanda"
+        },
+        "description": {
+          "english": "A modern corporate website developed for an HR and talent acquisition company, focused on presenting recruitment services, company culture, professional consulting solutions, and client engagement. The platform features responsive design, optimized performance, interactive contact sections, and scalable architecture tailored for business branding and professional digital presence.",
+          "spanish": "Un sitio web corporativo moderno desarrollado para una empresa de recursos humanos y adquisición de talento, enfocado en presentar servicios de reclutamiento, cultura empresarial, soluciones de consultoría profesional y comunicación con clientes. La plataforma incluye diseño responsivo, rendimiento optimizado, secciones interactivas de contacto y una arquitectura escalable orientada al branding empresarial y presencia digital profesional."
+        },
+        "purpose": {
+          "english": "Build a professional digital presence for an HR company to showcase recruitment services, business solutions, and company identity.",
+          "spanish": "Construir una presencia digital profesional para una empresa de recursos humanos que permita mostrar servicios de reclutamiento, soluciones empresariales e identidad corporativa."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Vite",
+          "Firebase",
+          "Tailwind CSS",
+          "Jest",
+          "Node.js",
+          "Responsive Design",
+          "REST APIs"
+        ]
+      },
+      "19": {
+        "title": {
+          "english": "One Piece DB Project",
+          "spanish": "One Piece DB Project"
+        },
+        "description": {
+          "english": "A comprehensive multimedia database platform dedicated to the One Piece franchise, featuring a curated compendium of anime openings, endings, OST tracks, movies, specials, and related media content. The platform includes a full-featured web player experience inspired by modern streaming interfaces, dynamic character-based color themes, categorized archives, advanced filtering, and detailed metadata for music tracks and media entries.",
+          "spanish": "Una plataforma multimedia integral dedicada a la franquicia de One Piece, que incluye un compendio curado de openings, endings, bandas sonoras, películas, especiales y contenido multimedia relacionado. La plataforma incorpora una experiencia completa de reproductor web inspirada en interfaces modernas de streaming, temas dinámicos basados en personajes, archivos categorizados, filtros avanzados y metadatos detallados para canciones y contenido multimedia."
+        },
+        "purpose": {
+          "english": "Create a centralized entertainment and archival platform for One Piece media, music, and special content with an immersive streaming-style user experience.",
+          "spanish": "Crear una plataforma centralizada de entretenimiento y archivo para contenido multimedia, música y material especial de One Piece con una experiencia inmersiva similar a servicios de streaming."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Node.js",
+          "Web Audio API",
+          "Firebase",
+          "Responsive Design",
+          "REST APIs"
+        ]
+      },
+      "20": {
+        "title": {
+          "english": "Exp Tracker",
+          "spanish": "Exp Tracker"
+        },
+        "description": {
+          "english": "A personal finance and expense tracking application designed to help users manage daily spending, monitor financial habits, and visualize budgeting data through interactive dashboards and analytics. The platform includes expense categorization, real-time tracking, financial summaries, responsive interfaces, and cloud-based synchronization for efficient money management.",
+          "spanish": "Una aplicación de gestión financiera y seguimiento de gastos diseñada para ayudar a los usuarios a administrar gastos diarios, monitorear hábitos financieros y visualizar presupuestos mediante paneles interactivos y analíticas. La plataforma incluye categorización de gastos, seguimiento en tiempo real, resúmenes financieros, interfaces responsivas y sincronización en la nube para una administración eficiente del dinero."
+        },
+        "purpose": {
+          "english": "Provide users with an intuitive platform for tracking expenses, analyzing spending behavior, and improving personal financial management.",
+          "spanish": "Proporcionar a los usuarios una plataforma intuitiva para rastrear gastos, analizar hábitos de consumo y mejorar la administración financiera personal."
+        },
+        "status": {
+          "english": "Completed",
+          "spanish": "Completado"
+        },
+        "technologies": [
+          "React",
+          "TypeScript",
+          "SCSS",
+          "Firebase",
+          "Node.js",
+          "Chart.js"
+        ]
+      },
+      "22": {
+        "title": { "english": "Portfolio Website", "spanish": "Sitio Web Personal" },
+        "description": { "english": "A bilingual portfolio website built with React, TypeScript, and Tailwind CSS featuring a retro pixel theme, centralized i18n, project showcase with modal dialogs, and responsive design. Demonstrates modern frontend architecture with dynamic routing, theme switching, and content management.", "spanish": "Un sitio web personal bilingüe construido con React, TypeScript y Tailwind CSS con temática retro pixel, i18n centralizado, exhibición de proyectos con diálogos modales y diseño responsivo. Demuestra arquitectura frontend moderna con enrutamiento dinámico, cambio de tema y gestión de contenido." },
+        "purpose": { "english": "Showcase technical skills, projects, and professional experience through a polished, bilingual interface with a unique pixel-art aesthetic.", "spanish": "Mostrar habilidades técnicas, proyectos y experiencia profesional a través de una interfaz bilingüe pulida con una estética única de arte pixel." },
+        "status": { "english": "Completed", "spanish": "Completado" },
+        "technologies": ["React", "Typescript", "Vite", "Tailwind CSS", "Node.js"]
+      },
+      "21": {
+        "title": {
+          "english": "Interview Data Lab",
+          "spanish": "Interview Data Lab"
+        },
+        "description": {
+          "english": "An AI-powered talent analysis and recruitment platform that automates hiring workflows through resume analysis, semantic candidate matching, and real-time interview intelligence. The system leverages machine learning models, speech recognition, sentiment analysis, and live transcription to provide objective hiring recommendations and advanced candidate evaluation tools for recruiters and HR teams.",
+          "spanish": "Una plataforma de análisis de talento y reclutamiento impulsada por IA que automatiza procesos de contratación mediante análisis de currículums, emparejamiento semántico de candidatos y análisis inteligente de entrevistas en tiempo real. El sistema utiliza modelos de machine learning, reconocimiento de voz, análisis de sentimientos y transcripción en vivo para proporcionar recomendaciones objetivas de contratación y herramientas avanzadas de evaluación para reclutadores y equipos de RRHH."
+        },
+        "purpose": {
+          "english": "Develop an intelligent recruitment ecosystem capable of analyzing resumes, matching candidates to job requirements, and conducting AI-assisted live interview evaluations with real-time sentiment and speech analysis.",
+          "spanish": "Desarrollar un ecosistema inteligente de reclutamiento capaz de analizar currículums, emparejar candidatos con requisitos laborales y realizar evaluaciones de entrevistas asistidas por IA con análisis de sentimientos y voz en tiempo real."
+        },
+        "functionality": {
+          "english": "The platform extracts technical and professional skills from resumes using pattern recognition systems with over 1,400 extraction rules combined with AI embeddings for semantic understanding. Compatibility scoring is calculated through weighted analysis including semantic similarity (30%), technical skills matching (40%), and experience/education evaluation (30%). Live interviews are powered through WebRTC audio streaming, real-time transcription pipelines, WebSocket communication, and emotion analysis systems for dynamic candidate assessment.",
+          "spanish": "La plataforma extrae habilidades técnicas y profesionales de currículums utilizando sistemas de reconocimiento de patrones con más de 1,400 reglas de extracción combinadas con embeddings de IA para comprensión semántica. El puntaje de compatibilidad se calcula mediante un análisis ponderado que incluye similitud semántica (30%), coincidencia de habilidades técnicas (40%) y evaluación de experiencia/educación (30%). Las entrevistas en vivo funcionan mediante transmisión de audio con WebRTC, pipelines de transcripción en tiempo real, comunicación vía WebSocket y sistemas de análisis emocional para evaluación dinámica de candidatos."
+        },
+        "status": {
+          "english": "In Progress",
+          "spanish": "En Progreso"
+        },
+        "technologies": [
+          "React",
+          "TypeScript",
+          "DaisyUI",
+          "Firebase",
+          "Node.js",
+          "Vite",
+          "ESLint",
+          "WebRTC",
+          "WebSockets",
+          "Gemini API",
+          "HuggingFace",
+          "Xenova",
+          "Vosk",
+          "pysentimiento",
+          "Machine Learning",
+          "AI Embeddings",
+          "Speech Recognition",
+          "REST APIs"
+        ]
+      }
+    },
+    "planned": [
+      {
+        "title": {
+          "english": "AI Model Gateway & API Proxy",
+          "spanish": "Gateway y Proxy de Modelos de IA"
+        },
+        "description": {
+          "english": "A centralized AI model gateway and proxy platform designed to securely connect API keys, route requests between multiple LLM providers, and act as a bridge between development platforms such as VS Code integrations, Outlier Playground, local AI environments, and external AI services. The system includes provider abstraction, usage analytics, authentication layers, request logging, model fallback routing, and unified API management for multi-platform AI workflows.",
+          "spanish": "Una plataforma centralizada de gateway y proxy de modelos de IA diseñada para conectar de forma segura claves API, enrutar solicitudes entre múltiples proveedores de LLMs y actuar como puente entre plataformas de desarrollo como integraciones de VS Code, Outlier Playground, entornos locales de IA y servicios externos de inteligencia artificial. El sistema incluye abstracción de proveedores, analíticas de uso, capas de autenticación, registro de solicitudes, enrutamiento de respaldo entre modelos y administración unificada de APIs para flujos de trabajo de IA multiplataforma."
+        },
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "Express.js",
+          "Docker",
+          "Redis",
+          "REST APIs",
+          "WebSockets",
+          "OpenAI API",
+          "Anthropic API",
+          "Gemini API",
+          "LM Studio",
+          "VS Code Extension API",
+          "Firebase",
+          "JWT"
+        ]
+      },
+      {
+        "title": {
+          "english": "LLM-Powered Recipe Tracking & Recommendation Platform",
+          "spanish": "Plataforma de Seguimiento y Recomendación de Recetas con LLM"
+        },
+        "description": {
+          "english": "A web platform powered by LLMs that provides personalized recipe recommendations, meal planning, ingredient tracking, and nutritional insights based on dietary preferences, cooking habits, and available ingredients.",
+          "spanish": "Una plataforma web impulsada por LLMs que proporciona recomendaciones personalizadas de recetas, planificación de comidas, seguimiento de ingredientes y análisis nutricionales basados en preferencias dietéticas, hábitos de cocina e ingredientes disponibles."
+        },
+        "technologies": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "OpenAI API",
+          "Tailwind CSS",
+          "Firebase"
+        ]
+      },
+      {
+        "title": {
+          "english": "Monster Hunter Wilds Companion App",
+          "spanish": "Aplicación Compañera de Monster Hunter Wilds"
+        },
+        "description": {
+          "english": "A mobile companion application integrated with Monster Hunter Wilds APIs to provide real-time game data, build planning, monster tracking, equipment management, and interactive hunting guides.",
+          "spanish": "Una aplicación móvil compañera integrada con APIs de Monster Hunter Wilds para proporcionar datos del juego en tiempo real, planificación de builds, seguimiento de monstruos, gestión de equipamiento y guías interactivas de caza."
+        },
+        "technologies": [
+          "React Native",
+          "Node.js",
+          "REST APIs",
+          "Firebase",
+          "TypeScript"
+        ]
+      },
+      {
+        "title": {
+          "english": "Multi-Format File Converter",
+          "spanish": "Convertidor Multi-Formato de Archivos"
+        },
+        "description": {
+          "english": "A web-based file conversion platform supporting multiple document, image, audio, and media formats through a modern drag-and-drop interface with cloud processing capabilities.",
+          "spanish": "Una plataforma web de conversión de archivos que soporta múltiples formatos de documentos, imágenes, audio y multimedia mediante una interfaz moderna de arrastrar y soltar con capacidades de procesamiento en la nube."
+        },
+        "technologies": [
+          "Python",
+          "Flask",
+          "React",
+          "AWS Lambda",
+          "AWS S3",
+          "Docker"
+        ]
+      },
+      {
+        "title": {
+          "english": "AI Meeting Audio Extractor & Note Assistant",
+          "spanish": "Extractor de Audio y Asistente de Notas con IA"
+        },
+        "description": {
+          "english": "A mobile application capable of extracting live meeting audio, performing sentiment analysis, generating AI-powered summaries, and creating structured notes with speaker identification and searchable transcripts.",
+          "spanish": "Una aplicación móvil capaz de extraer audio de reuniones en vivo, realizar análisis de sentimientos, generar resúmenes impulsados por IA y crear notas estructuradas con identificación de hablantes y transcripciones buscables."
+        },
+        "technologies": [
+          "React Native",
+          "Python",
+          "AWS Transcribe",
+          "AWS Comprehend",
+          "SageMaker",
+          "WebSockets"
+        ]
+      },
+      {
+        "title": {
+          "english": "LLM-Powered Code Review Assistant",
+          "spanish": "Asistente de Revisión de Código con LLM"
+        },
+        "description": {
+          "english": "A developer plugin that uses LLMs to automate code reviews, detect potential issues, recommend optimizations, enforce best practices, and assist developers before deployment.",
+          "spanish": "Un plugin para desarrolladores que utiliza LLMs para automatizar revisiones de código, detectar posibles problemas, recomendar optimizaciones, aplicar buenas prácticas y asistir a desarrolladores antes del despliegue."
+        },
+        "technologies": [
+          "TypeScript",
+          "Node.js",
+          "OpenAI API",
+          "VS Code Extension API",
+          "REST APIs"
+        ]
+      },
+      {
+        "title": {
+          "english": "AI-Powered Psychometric Testing Platform",
+          "spanish": "Plataforma de Pruebas Psicométricas con IA"
+        },
+        "description": {
+          "english": "An AI-powered platform for creating, delivering, and analyzing psychometric evaluations with adaptive testing systems, automated scoring, behavioral insights, and recruitment-focused analytics.",
+          "spanish": "Una plataforma impulsada por IA para crear, administrar y analizar evaluaciones psicométricas con sistemas adaptativos de pruebas, calificación automatizada, análisis conductual y métricas enfocadas en reclutamiento."
+        },
+        "technologies": [
+          "React",
+          "Python",
+          "FastAPI",
+          "PostgreSQL",
+          "AWS",
+          "SageMaker"
+        ]
+      },
+      {
+        "title": {
+          "english": "LLM-Powered Professional References & Portfolio Hub",
+          "spanish": "Hub de Referencias Profesionales y Portafolios con LLM"
+        },
+        "description": {
+          "english": "A professional networking and portfolio platform powered by LLMs that enables verified references, career progression tracking, skill endorsements, and intelligent portfolio analysis for workers and recruiters.",
+          "spanish": "Una plataforma de networking profesional y portafolios impulsada por LLMs que permite referencias verificadas, seguimiento de progresión profesional, validación de habilidades y análisis inteligente de portafolios para trabajadores y reclutadores."
+        },
+        "technologies": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "OpenAI API",
+          "Firebase"
+        ]
+      },
+      {
+        "title": {
+          "english": "Document Versioning & Approval Management System",
+          "spanish": "Sistema de Gestión de Versiones y Aprobación de Documentos"
+        },
+        "description": {
+          "english": "A document workflow management platform designed for auditing and compliance processes, featuring version control, approval chains, digital traceability, and collaborative review systems.",
+          "spanish": "Una plataforma de gestión documental diseñada para procesos de auditoría y cumplimiento, que incluye control de versiones, cadenas de aprobación, trazabilidad digital y sistemas colaborativos de revisión."
+        },
+        "technologies": [
+          "Angular",
+          "Node.js",
+          "PostgreSQL",
+          "AWS S3",
+          "Docker"
+        ]
+      },
+      {
+        "title": {
+          "english": "AI-Powered Note-Taking Application",
+          "spanish": "Aplicación de Notas Impulsada por IA"
+        },
+        "description": {
+          "english": "A cross-platform AI note-taking application with smart summarization, contextual tagging, semantic search, collaborative workspaces, and productivity-focused automation features.",
+          "spanish": "Una aplicación multiplataforma de toma de notas con IA que incluye resúmenes inteligentes, etiquetado contextual, búsqueda semántica, espacios colaborativos y funciones de automatización enfocadas en productividad."
+        },
+        "technologies": [
+          "React Native",
+          "Node.js",
+          "Firebase",
+          "OpenAI API",
+          "TensorFlow"
+        ]
+      },
+      {
+        "title": {
+          "english": "Secure Encrypted Password Vault",
+          "spanish": "Bóveda Segura de Contraseñas Encriptadas"
+        },
+        "description": {
+          "english": "A local-first encrypted password management application with zero-knowledge architecture, secure offline access, encrypted synchronization, and advanced credential management features.",
+          "spanish": "Una aplicación de gestión de contraseñas con enfoque local-first y arquitectura de conocimiento cero, que ofrece acceso seguro sin conexión, sincronización encriptada y funciones avanzadas de gestión de credenciales."
+        },
+        "technologies": [
+          "Python",
+          "SQLite",
+          "Cryptography",
+          "Electron",
+          "TypeScript"
+        ]
+      },
+      {
+        "title": {
+          "english": "Anime Opening & Ending Tracking Database",
+          "spanish": "Base de Datos de Openings y Endings de Anime"
+        },
+        "description": {
+          "english": "A comprehensive anime media database focused on tracking and cataloging anime openings, endings, OSTs, and related media with playlist creation, advanced filtering, and multimedia playback features.",
+          "spanish": "Una base de datos multimedia de anime enfocada en rastrear y catalogar openings, endings, bandas sonoras y contenido relacionado con funciones de creación de playlists, filtros avanzados y reproducción multimedia."
+        },
+        "technologies": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Jikan API",
+          "Tailwind CSS"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "sectionTitle": {
+      "english": "Skills & Technologies",
+      "spanish": "Habilidades y Tecnologías"
+    },
+    "subtitle": {
+      "english": "Loading arsenal...",
+      "spanish": "Cargando arsenal..."
+    },
+    "note": {
+      "english": "Note: Skill levels vary across technologies. Some have been used extensively in production environments, while others have been explored through courses, personal projects, or academic work.",
+      "spanish": "Nota: Los niveles de habilidad varían entre tecnologías. Algunas han sido utilizadas extensivamente en entornos de producción, mientras que otras han sido exploradas a través de cursos, proyectos personales o trabajo académico."
+    },
+    "categories": {
+      "programmingLanguages": {
+        "english": "Programming Languages",
+        "spanish": "Lenguajes de Programación"
+      },
+      "frameworksFullStack": {
+        "english": "Frameworks & Full Stack",
+        "spanish": "Frameworks y Full Stack"
+      },
+      "apisCommunication": {
+        "english": "APIs & Communication",
+        "spanish": "APIs y Comunicación"
+      },
+      "databases": {
+        "english": "Databases",
+        "spanish": "Bases de Datos"
+      },
+      "cloudDevops": {
+        "english": "Cloud / DevOps / Infrastructure",
+        "spanish": "Cloud / DevOps / Infraestructura"
+      },
+      "awsServices": {
+        "english": "AWS Services",
+        "spanish": "Servicios AWS"
+      },
+      "azureDevops": {
+        "english": "Microsoft Azure / DevOps",
+        "spanish": "Microsoft Azure / DevOps"
+      },
+      "developmentTesting": {
+        "english": "Development & Testing Tools",
+        "spanish": "Herramientas de Desarrollo y Pruebas"
+      },
+      "architectureProcesses": {
+        "english": "Architecture / Processes / Security",
+        "spanish": "Arquitectura / Procesos / Seguridad"
+      },
+      "enterpriseApps": {
+        "english": "Enterprise Applications",
+        "spanish": "Aplicaciones Empresariales"
+      },
+      "osVirtualization": {
+        "english": "Operating Systems & Virtualization",
+        "spanish": "Sistemas Operativos y Virtualización"
+      },
+      "productivityDocs": {
+        "english": "Productivity & Documentation",
+        "spanish": "Productividad y Documentación"
+      }
+    }
+  },
+  "dialogs": {
+    "description": {
+      "english": "Description",
+      "spanish": "Descripción"
+    },
+    "purpose": {
+      "english": "Purpose & Features",
+      "spanish": "Propósito y Características"
+    },
+    "technologies": {
+      "english": "Technologies",
+      "spanish": "Tecnologías"
+    },
+    "status": {
+      "english": "Status",
+      "spanish": "Estado"
+    },
+    "liveDemo": {
+      "english": "Live Demo",
+      "spanish": "Demo en Vivo"
+    },
+    "github": {
+      "english": "GitHub",
+      "spanish": "GitHub"
+    },
+    "prevImage": {
+      "english": "Previous image",
+      "spanish": "Imagen anterior"
+    },
+    "nextImage": {
+      "english": "Next image",
+      "spanish": "Siguiente imagen"
+    },
+    "close": {
+      "english": "Close",
+      "spanish": "Cerrar"
+    }
+  },
+  "labels": {
+    "completed": {
+      "english": "Completed",
+      "spanish": "Completado"
+    },
+    "inProgress": {
+      "english": "In Progress",
+      "spanish": "En Progreso"
+    },
+    "planned": {
+      "english": "Planned",
+      "spanish": "Planeado"
+    },
+    "clickToView": {
+      "english": "Click to view details",
+      "spanish": "Click para ver detalles"
+    },
+    "technologies": {
+      "english": "Technologies",
+      "spanish": "Tecnologías"
+    }
+  },
+  "tooltips": {
+    "switchLang": {
+      "english": "Switch to Spanish",
+      "spanish": "Cambiar a Inglés"
+    },
+    "toggleTheme": {
+      "english": "Toggle theme",
+      "spanish": "Cambiar tema"
+    },
+    "viewProject": {
+      "english": "View project details",
+      "spanish": "Ver detalles del proyecto"
+    }
+  },
+  "footer": {
+    "copyright": {
+      "english": "© 2026 JAVIER DONADO. ALL RIGHTS RESERVED.",
+      "spanish": "© 2026 JAVIER DONADO. TODOS LOS DERECHOS RESERVADOS."
+    },
+    "linkedin": {
+      "english": "LinkedIn",
+      "spanish": "LinkedIn"
+    },
+    "version": { "english": "v2.0.0", "spanish": "v2.0.0" },
+    "lastUpdated": { "english": "May 2026", "spanish": "Mayo 2026" }
+  },
+  "cta": {
+    "title": {
+      "english": "Let's build something great",
+      "spanish": "Construyamos algo genial"
+    },
+    "subtitle": {
+      "english": "Available for new opportunities and collaborations.",
+      "spanish": "Disponible para nuevas oportunidades y colaboraciones."
+    },
+    "button": {
+      "english": "Contact",
+      "spanish": "Contacto"
+    }
+  },
+  "contact": {
+    "title": {
+      "english": "Let's Connect",
+      "spanish": "Conectémonos"
+    },
+    "subtitle": {
+      "english": "Ready for new quests",
+      "spanish": "Listo para nuevas aventuras"
+    },
+    "findMe": {
+      "english": "Find me on LinkedIn",
+      "spanish": "Encuéntrame en LinkedIn"
+    },
+    "description": {
+      "english": "Let's discuss your next project or just say hello!",
+      "spanish": "¡Hablemos de tu próximo proyecto o simplemente saluda!"
+    },
+    "cta": {
+      "english": "Connect on LinkedIn",
+      "spanish": "Conectar en LinkedIn"
+    },
+    "status": {
+      "english": "Status: Available for opportunities",
+      "spanish": "Estado: Disponible para oportunidades"
+    }
+  }
+}

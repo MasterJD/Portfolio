@@ -1,17 +1,17 @@
 import { useLanguage } from '../contexts/LanguageContext'
 
 export default function ContactPage() {
-  const { lang, t } = useLanguage()
+  const { tKey } = useLanguage()
 
   return (
     <div className="flex-1 flex items-center justify-center py-20">
       <div className="max-w-[600px] w-full text-center px-4">
         <div className="mb-12">
           <h1 className="text-black dark:text-white text-4xl md:text-5xl font-bold tracking-tighter uppercase mb-4">
-            {t("Let's Connect", 'Conectémonos')}
+            {tKey('contact.title')}
           </h1>
           <p className="text-primary font-medium tracking-[0.2em] uppercase text-sm">
-            // {t('Ready for new quests', 'Listo para nuevas aventuras')}
+            // {tKey('contact.subtitle')}
           </p>
         </div>
 
@@ -30,10 +30,10 @@ export default function ContactPage() {
 
             <div className="space-y-4">
               <p className="text-black/70 dark:text-white/70 text-lg uppercase tracking-wider">
-                {t('Find me on LinkedIn', 'Encuéntrame en LinkedIn')}
+                {tKey('contact.findMe')}
               </p>
               <p className="text-black/50 dark:text-white/50 text-sm">
-                {t("Let's discuss your next project or just say hello!", '¡Hablemos de tu próximo proyecto o simplemente saluda!')}
+                {tKey('contact.description')}
               </p>
             </div>
 
@@ -43,7 +43,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="group flex items-center gap-4 px-10 py-5 bg-primary text-white font-bold uppercase tracking-widest border-b-4 border-r-4 border-black dark:border-white hover:bg-primary/90 active:translate-y-1 active:border-b-0 transition-all"
             >
-              <span>{t('Connect on LinkedIn', 'Conectar en LinkedIn')}</span>
+              <span>{tKey('contact.cta')}</span>
               <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
           </div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
         <div className="mt-8 flex justify-center items-center gap-3">
           <div className="w-2 h-2 bg-green-500 animate-pulse" />
           <span className="text-[10px] text-gray-500 dark:text-zinc-500 uppercase tracking-widest">
-            {t('Status: Available for opportunities', 'Estado: Disponible para oportunidades')}
+            {tKey('contact.status')}
           </span>
         </div>
       </div>
