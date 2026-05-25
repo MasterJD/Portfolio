@@ -28,7 +28,14 @@ export interface ProjectContent {
   }
 }
 
-export const projects: Project[] = [
+const withBase = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+
+const normalizeProject = (project: Project): Project => ({
+  ...project,
+  images: project.images.map(withBase),
+})
+
+const rawProjects: Project[] = [
   {
     id: 22,
     icon: 'calendar_month',
@@ -267,6 +274,8 @@ export const projects: Project[] = [
     githubEnabled: true,
   },
 ]
+
+export const projects = rawProjects.map(normalizeProject)
 
 export const techIconMap: Record<string, { src: string; className?: string }> = {
   React: { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
